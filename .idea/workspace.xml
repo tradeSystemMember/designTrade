@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="84c9313e-5227-49e3-97b2-f311ba399f89" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gem/tradesystem/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gem/tradesystem/controller/TestController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +102,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1582073973387</updated>
-      <workItem from="1582073976833" duration="4182000" />
+      <workItem from="1582073976833" duration="4609000" />
     </task>
     <task id="LOCAL-00001" summary="xzz-2-19:第一次提交">
       <created>1582074635277</created>
@@ -137,7 +139,21 @@
       <option name="project" value="LOCAL" />
       <updated>1582078509186</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="xzz-2-19:第一次提交">
+      <created>1582078697674</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1582078697674</updated>
+    </task>
+    <task id="LOCAL-00007" summary="xzz-2-19:第二次提交">
+      <created>1582078838724</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1582078838724</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,7 +161,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="xzz-2-19:第一次提交" />
-    <option name="LAST_COMMIT_MESSAGE" value="xzz-2-19:第一次提交" />
+    <MESSAGE value="xzz-2-19:第二次提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="xzz-2-19:第二次提交" />
   </component>
   <component name="WindowStateProjectService">
     <state x="765" y="445" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1582077981236">
@@ -156,10 +173,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="739" y="399" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1920.1040@0.0.1920.1040" timestamp="1582077986429" />
-    <state x="516" y="98" key="CommitChangelistDialog2" timestamp="1582078696816">
+    <state x="516" y="98" key="CommitChangelistDialog2" timestamp="1582078837826">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="516" y="98" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1582078696816" />
+    <state x="516" y="98" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1582078837826" />
+    <state x="368" y="183" key="DiffContextDialog" timestamp="1582078846438">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="368" y="183" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582078846438" />
     <state x="1188" y="405" key="FileChooserDialogImpl" timestamp="1582077273621">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -200,10 +221,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="752" y="192" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1582076369509" />
-    <state x="404" y="444" key="Vcs.Push.Dialog.v2" timestamp="1582078708352">
+    <state x="404" y="444" key="Vcs.Push.Dialog.v2" timestamp="1582078924723">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="404" y="444" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1582078708352" />
+    <state x="404" y="444" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1582078924723" />
     <state x="752" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1582078776559">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -212,10 +233,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="636" y="253" width="647" height="534" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1582077757306" />
-    <state x="647" y="311" key="git4idea.merge.GitPullDialog" timestamp="1582078802568">
+    <state x="647" y="311" key="git4idea.merge.GitPullDialog" timestamp="1582079032836">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="647" y="311" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582078802568" />
+    <state x="647" y="311" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582079032836" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1582076783713">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
