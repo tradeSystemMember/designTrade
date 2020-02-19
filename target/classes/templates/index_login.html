@@ -1,10 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>首页</title>
-		<link/>
 		<link rel="stylesheet" href="css/layout.css" />
 		<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
 		<script type="text/javascript" src="js/bannerslider.js"></script>
@@ -18,18 +16,25 @@
 				<div class="top_search left">
 					<input type="text" class="text_inp" value="请输入关键字" onfocus="if(this.value=='请输入关键字'){this.value='';this.style.color='#999999'}"
 					 onblur="if(this.value==''){this.value='请输入关键字';this.style.color='#999999'}" />
-					<a class="text_but" href="pro_list.html">确定</a>
+					<a class="text_but" href="#">确定</a>
 				</div>
 				<div class="top_list right">
 					<ul id="top_xiala">
-						<li class="gwc_li"><i onclick="javascript:showDiv()">购物车</i></li>
-						<li class="sc_li"><i onclick="javascript:showDiv()">收藏</i></li>
-						<li class="zh_li">
-							<div class="zh_d">
-								<a onclick="javascript:showDiv()">登陆</a>
-								<a href="#">/</a>
-								<a href="reg.html">注册</a>
-							</div>
+						<li class="gwc_li"><i>购物车</i></li>
+						<li class="sc_li"><i>收藏</i></li>
+						<li class="bz_li">
+							<i>
+								<div class="y login_after_y">
+									<p id="bz_id" class="login_after">admin</p>
+									<div class="xx_xiala bz_xiala">
+										<div><a href="user_center.html"><span class="login_after_icon1">用户中心</span></a></div>
+										<div><a href="user_fabu_bjfb.html"><span class="bz_xialaz_icon2 login_after_icon2">发布上传</span></a></div>
+										<div><a href="#"><span class="bz_xialaz_icon3 login_after_icon3">修改资料</span></a></div>
+										<!-- <div><a href="#"><span class="bz_xialaz_icon4 login_after_icon4">申请设计师</span></a></div> -->
+										<div><a href="index.html"><span class="bz_xialaz_icon5 login_after_icon5">退出登陆</span></a></div>
+									</div>
+								</div>
+							</i>
 						</li>
 						<li class="xx_li">
 							<i>
@@ -39,8 +44,6 @@
 										<div><a href="#">注册成功，获得10积分</a></div>
 										<div><a href="#">完善个人资料，获得20积分</a></div>
 										<div><a href="#">发布素材成功，获得20积分</a></div>
-										<div><a href="#">发布素材成功，恭喜你获得20积分积分</a></div>
-										<div><a href="#">发布素材成功，恭喜你获得20积分积分</a></div>
 									</div>
 								</div>
 							</i>
@@ -69,194 +72,194 @@
 		<!--导航结构-->
 		<div class="nav_wrap">
 			<div class="nav_content auto">
-				<ul class="list auto" id="nav_ulwrap">
+				<ul class="list auto">
 					<li>
 						<a href="#"><span class="nav_s1">素材</span></a>
 						<div class="down">
-							<a class="nav_list left" href="pro_list.html">
-								<h2 class="nav_list_b1"><i>节日素材</i><span>1236</span></h2>
+							<div class="nav_list left">
+								<h2 class="nav_list_b1"><a href="#">节日素材</a><span>1236</span></h2>
 								<div class="nav_list_jieshao">包含了大量节日素材，轻松解决节日大量活动广告设计的问题</div>
-							</a>
-							<a class="nav_list left" href="#">
-								<h2 class="nav_list_b2"><i>LOGO</i><span>1236</span></h2>
+							</div>
+							<div class="nav_list left">
+								<h2 class="nav_list_b2"><a href="#">LOGO</a><span>1236</span></h2>
 								<div class="nav_list_jieshao">包含了大量节日素材，轻松解决节日大量活动广告设计的问题</div>
-							</a>
-							<a class="nav_list left" href="#">
-								<h2 class="nav_list_b3"><i>卡通素材/插画</i><span>1236</span></h2>
+							</div>
+							<div class="nav_list left">
+								<h2 class="nav_list_b3"><a href="#">卡通素材/插画</a><span>1236</span></h2>
 								<div class="nav_list_jieshao">包含了大量节日素材，轻松解决节日大量活动广告设计的问题</div>
-							</a>
-							<a class="nav_list left" href="#">
-								<h2 class="nav_list_b4"><i>摄影图库</i><span>1236</span></h2>
+							</div>
+							<div class="nav_list left">
+								<h2 class="nav_list_b4"><a href="#">摄影图库</a><span>1236</span></h2>
 								<div class="nav_list_jieshao">包含了大量节日素材，轻松解决节日大量活动广告设计的问题</div>
-							</a>
-							<a class="nav_list left" href="#">
-								<h2 class="nav_list_b5"><i>视频素材</i><span>1236</span></h2>
+							</div>
+							<div class="nav_list left">
+								<h2 class="nav_list_b5"><a href="#">视频素材</a><span>1236</span></h2>
 								<div class="nav_list_jieshao">包含了大量节日素材，轻松解决节日大量活动广告设计的问题</div>
-							</a>
-							<a class="nav_list left" href="#">
-								<h2 class="nav_list_b6"><i>3D素材</i><span>1236</span></h2>
+							</div>
+							<div class="nav_list left">
+								<h2 class="nav_list_b6"><a href="#">3D素材</a><span>1236</span></h2>
 								<div class="nav_list_jieshao">包含了大量节日素材，轻松解决节日大量活动广告设计的问题</div>
-							</a>
-							<a class="nav_list left" href="#">
-								<h2 class="nav_list_b7"><i>工业建筑</i><span>1236</span></h2>
+							</div>
+							<div class="nav_list left">
+								<h2 class="nav_list_b7"><a href="#">工业建筑</a><span>1236</span></h2>
 								<div class="nav_list_jieshao">包含了大量节日素材，轻松解决节日大量活动广告设计的问题</div>
-							</a>
-							<a class="nav_list left" href="#">
-								<h2 class="nav_list_b8"><i>服装设计</i><span>1236</span></h2>
+							</div>
+							<div class="nav_list left">
+								<h2 class="nav_list_b8"><a href="#">服装设计</a><span>1236</span></h2>
 								<div class="nav_list_jieshao">包含了大量节日素材，轻松解决节日大量活动广告设计的问题</div>
-							</a>
+							</div>
 							<div class="clear"></div>
 						</div>
 					</li>
 					<li>
 						<a href="#"><span class="nav_s2">模板</span></a>
 						<div class="down down_s2">
-							<a class="nav_list left" href="#">
-								<h2 class="nav_list_b1"><i>节日素材2</i><span>1236</span></h2>
+							<div class="nav_list left">
+								<h2 class="nav_list_b1"><a href="#">节日素材2</a><span>1236</span></h2>
 								<div class="nav_list_jieshao">包含了大量节日素材，轻松解决节日大量活动广告设计的问题</div>
-							</a>
-							<a class="nav_list left" href="#">
-								<h2 class="nav_list_b2"><i>LOGO</i><span>1236</span></h2>
+							</div>
+							<div class="nav_list left">
+								<h2 class="nav_list_b2"><a href="#">LOGO</a><span>1236</span></h2>
 								<div class="nav_list_jieshao">包含了大量节日素材，轻松解决节日大量活动广告设计的问题</div>
-							</a>
-							<a class="nav_list left" href="#">
-								<h2 class="nav_list_b3"><i>卡通素材/插画</i><span>1236</span></h2>
+							</div>
+							<div class="nav_list left">
+								<h2 class="nav_list_b3"><a href="#">卡通素材/插画</a><span>1236</span></h2>
 								<div class="nav_list_jieshao">包含了大量节日素材，轻松解决节日大量活动广告设计的问题</div>
-							</a>
-							<a class="nav_list left" href="#">
-								<h2 class="nav_list_b4"><i>摄影图库</i><span>1236</span></h2>
+							</div>
+							<div class="nav_list left">
+								<h2 class="nav_list_b4"><a href="#">摄影图库</a><span>1236</span></h2>
 								<div class="nav_list_jieshao">包含了大量节日素材，轻松解决节日大量活动广告设计的问题</div>
-							</a>
-							<a class="nav_list left" href="#">
-								<h2 class="nav_list_b5"><i>视频素材</i><span>1236</span></h2>
+							</div>
+							<div class="nav_list left">
+								<h2 class="nav_list_b5"><a href="#">视频素材</a><span>1236</span></h2>
 								<div class="nav_list_jieshao">包含了大量节日素材，轻松解决节日大量活动广告设计的问题</div>
-							</a>
-							<a class="nav_list left" href="#">
-								<h2 class="nav_list_b6"><i>3D素材</i><span>1236</span></h2>
+							</div>
+							<div class="nav_list left">
+								<h2 class="nav_list_b6"><a href="#">3D素材</a><span>1236</span></h2>
 								<div class="nav_list_jieshao">包含了大量节日素材，轻松解决节日大量活动广告设计的问题</div>
-							</a>
-							<a class="nav_list left" href="#">
-								<h2 class="nav_list_b7"><i>工业建筑</i><span>1236</span></h2>
+							</div>
+							<div class="nav_list left">
+								<h2 class="nav_list_b7"><a href="#">工业建筑</a><span>1236</span></h2>
 								<div class="nav_list_jieshao">包含了大量节日素材，轻松解决节日大量活动广告设计的问题</div>
-							</a>
-							<a class="nav_list left" href="#">
-								<h2 class="nav_list_b8"><i>服装设计</i><span>1236</span></h2>
+							</div>
+							<div class="nav_list left">
+								<h2 class="nav_list_b8"><a href="#">服装设计</a><span>1236</span></h2>
 								<div class="nav_list_jieshao">包含了大量节日素材，轻松解决节日大量活动广告设计的问题</div>
-							</a>
+							</div>
 							<div class="clear"></div>
 						</div>
 					</li>
 					<li>
 						<a href="#"><span class="nav_s3">设计</span></a>
 						<div class="down down_s3">
-							<a class="nav_list left" href="#">
-								<h2 class="nav_list_b1"><i>节日素材3</i><span>1236</span></h2>
+							<div class="nav_list left">
+								<h2 class="nav_list_b1"><a href="#">节日素材3</a><span>1236</span></h2>
 								<div class="nav_list_jieshao">包含了大量节日素材，轻松解决节日大量活动广告设计的问题</div>
-							</a>
-							<a class="nav_list left" href="#">
-								<h2 class="nav_list_b2"><i>LOGO</i><span>1236</span></h2>
+							</div>
+							<div class="nav_list left">
+								<h2 class="nav_list_b2"><a href="#">LOGO</a><span>1236</span></h2>
 								<div class="nav_list_jieshao">包含了大量节日素材，轻松解决节日大量活动广告设计的问题</div>
-							</a>
-							<a class="nav_list left" href="#">
-								<h2 class="nav_list_b3"><i>卡通素材/插画</i><span>1236</span></h2>
+							</div>
+							<div class="nav_list left">
+								<h2 class="nav_list_b3"><a href="#">卡通素材/插画</a><span>1236</span></h2>
 								<div class="nav_list_jieshao">包含了大量节日素材，轻松解决节日大量活动广告设计的问题</div>
-							</a>
-							<a class="nav_list left" href="#">
-								<h2 class="nav_list_b4"><i>摄影图库</i><span>1236</span></h2>
+							</div>
+							<div class="nav_list left">
+								<h2 class="nav_list_b4"><a href="#">摄影图库</a><span>1236</span></h2>
 								<div class="nav_list_jieshao">包含了大量节日素材，轻松解决节日大量活动广告设计的问题</div>
-							</a>
-							<a class="nav_list left" href="#">
-								<h2 class="nav_list_b5"><i>视频素材</i><span>1236</span></h2>
+							</div>
+							<div class="nav_list left">
+								<h2 class="nav_list_b5"><a href="#">视频素材</a><span>1236</span></h2>
 								<div class="nav_list_jieshao">包含了大量节日素材，轻松解决节日大量活动广告设计的问题</div>
-							</a>
-							<a class="nav_list left" href="#">
-								<h2 class="nav_list_b6"><i>3D素材</i><span>1236</span></h2>
+							</div>
+							<div class="nav_list left">
+								<h2 class="nav_list_b6"><a href="#">3D素材</a><span>1236</span></h2>
 								<div class="nav_list_jieshao">包含了大量节日素材，轻松解决节日大量活动广告设计的问题</div>
-							</a>
-							<a class="nav_list left" href="#">
-								<h2 class="nav_list_b7"><i>工业建筑</i><span>1236</span></h2>
+							</div>
+							<div class="nav_list left">
+								<h2 class="nav_list_b7"><a href="#">工业建筑</a><span>1236</span></h2>
 								<div class="nav_list_jieshao">包含了大量节日素材，轻松解决节日大量活动广告设计的问题</div>
-							</a>
-							<a class="nav_list left" href="#">
-								<h2 class="nav_list_b8"><i>服装设计</i><span>1236</span></h2>
+							</div>
+							<div class="nav_list left">
+								<h2 class="nav_list_b8"><a href="#">服装设计</a><span>1236</span></h2>
 								<div class="nav_list_jieshao">包含了大量节日素材，轻松解决节日大量活动广告设计的问题</div>
-							</a>
+							</div>
 							<div class="clear"></div>
 						</div>
 					</li>
 					<li>
 						<a href="#"><span class="nav_s4">教程</span></a>
 						<div class="down down_s4">
-							<a class="nav_list left" href="#">
-								<h2 class="nav_list_b1"><i>节日素材4</i><span>1236</span></h2>
+							<div class="nav_list left">
+								<h2 class="nav_list_b1"><a href="#">节日素材4</a><span>1236</span></h2>
 								<div class="nav_list_jieshao">包含了大量节日素材，轻松解决节日大量活动广告设计的问题</div>
-							</a>
-							<a class="nav_list left" href="#">
-								<h2 class="nav_list_b2"><i>LOGO</i><span>1236</span></h2>
+							</div>
+							<div class="nav_list left">
+								<h2 class="nav_list_b2"><a href="#">LOGO</a><span>1236</span></h2>
 								<div class="nav_list_jieshao">包含了大量节日素材，轻松解决节日大量活动广告设计的问题</div>
-							</a>
-							<a class="nav_list left" href="#">
-								<h2 class="nav_list_b3"><i>卡通素材/插画</i><span>1236</span></h2>
+							</div>
+							<div class="nav_list left">
+								<h2 class="nav_list_b3"><a href="#">卡通素材/插画</a><span>1236</span></h2>
 								<div class="nav_list_jieshao">包含了大量节日素材，轻松解决节日大量活动广告设计的问题</div>
-							</a>
-							<a class="nav_list left" href="#">
-								<h2 class="nav_list_b4"><i>摄影图库</i><span>1236</span></h2>
+							</div>
+							<div class="nav_list left">
+								<h2 class="nav_list_b4"><a href="#">摄影图库</a><span>1236</span></h2>
 								<div class="nav_list_jieshao">包含了大量节日素材，轻松解决节日大量活动广告设计的问题</div>
-							</a>
-							<a class="nav_list left" href="#">
-								<h2 class="nav_list_b5"><i>视频素材</i><span>1236</span></h2>
+							</div>
+							<div class="nav_list left">
+								<h2 class="nav_list_b5"><a href="#">视频素材</a><span>1236</span></h2>
 								<div class="nav_list_jieshao">包含了大量节日素材，轻松解决节日大量活动广告设计的问题</div>
-							</a>
-							<a class="nav_list left" href="#">
-								<h2 class="nav_list_b6"><i>3D素材</i><span>1236</span></h2>
+							</div>
+							<div class="nav_list left">
+								<h2 class="nav_list_b6"><a href="#">3D素材</a><span>1236</span></h2>
 								<div class="nav_list_jieshao">包含了大量节日素材，轻松解决节日大量活动广告设计的问题</div>
-							</a>
-							<a class="nav_list left" href="#">
-								<h2 class="nav_list_b7"><i>工业建筑</i><span>1236</span></h2>
+							</div>
+							<div class="nav_list left">
+								<h2 class="nav_list_b7"><a href="#">工业建筑</a><span>1236</span></h2>
 								<div class="nav_list_jieshao">包含了大量节日素材，轻松解决节日大量活动广告设计的问题</div>
-							</a>
-							<a class="nav_list left" href="#">
-								<h2 class="nav_list_b8"><i>服装设计</i><span>1236</span></h2>
+							</div>
+							<div class="nav_list left">
+								<h2 class="nav_list_b8"><a href="#">服装设计</a><span>1236</span></h2>
 								<div class="nav_list_jieshao">包含了大量节日素材，轻松解决节日大量活动广告设计的问题</div>
-							</a>
+							</div>
 							<div class="clear"></div>
 						</div>
 					</li>
 					<li>
 						<a href="#"><span class="nav_s5">主题</span></a>
 						<div class="down down_s5">
-							<a class="nav_list left" href="#">
-								<h2 class="nav_list_b1"><i>节日素材5</i><span>1236</span></h2>
+							<div class="nav_list left">
+								<h2 class="nav_list_b1"><a href="#">节日素材5</a><span>1236</span></h2>
 								<div class="nav_list_jieshao">包含了大量节日素材，轻松解决节日大量活动广告设计的问题</div>
-							</a>
-							<a class="nav_list left" href="#">
-								<h2 class="nav_list_b2"><i>LOGO</i><span>1236</span></h2>
+							</div>
+							<div class="nav_list left">
+								<h2 class="nav_list_b2"><a href="#">LOGO</a><span>1236</span></h2>
 								<div class="nav_list_jieshao">包含了大量节日素材，轻松解决节日大量活动广告设计的问题</div>
-							</a>
-							<a class="nav_list left" href="#">
-								<h2 class="nav_list_b3"><i>卡通素材/插画</i><span>1236</span></h2>
+							</div>
+							<div class="nav_list left">
+								<h2 class="nav_list_b3"><a href="#">卡通素材/插画</a><span>1236</span></h2>
 								<div class="nav_list_jieshao">包含了大量节日素材，轻松解决节日大量活动广告设计的问题</div>
-							</a>
-							<a class="nav_list left" href="#">
-								<h2 class="nav_list_b4"><i>摄影图库</i><span>1236</span></h2>
+							</div>
+							<div class="nav_list left">
+								<h2 class="nav_list_b4"><a href="#">摄影图库</a><span>1236</span></h2>
 								<div class="nav_list_jieshao">包含了大量节日素材，轻松解决节日大量活动广告设计的问题</div>
-							</a>
-							<a class="nav_list left" href="#">
-								<h2 class="nav_list_b5"><i>视频素材</i><span>1236</span></h2>
+							</div>
+							<div class="nav_list left">
+								<h2 class="nav_list_b5"><a href="#">视频素材</a><span>1236</span></h2>
 								<div class="nav_list_jieshao">包含了大量节日素材，轻松解决节日大量活动广告设计的问题</div>
-							</a>
-							<a class="nav_list left" href="#">
-								<h2 class="nav_list_b6"><i>3D素材</i><span>1236</span></h2>
+							</div>
+							<div class="nav_list left">
+								<h2 class="nav_list_b6"><a href="#">3D素材</a><span>1236</span></h2>
 								<div class="nav_list_jieshao">包含了大量节日素材，轻松解决节日大量活动广告设计的问题</div>
-							</a>
-							<a class="nav_list left" href="#">
-								<h2 class="nav_list_b7"><i>工业建筑</i><span>1236</span></h2>
+							</div>
+							<div class="nav_list left">
+								<h2 class="nav_list_b7"><a href="#">工业建筑</a><span>1236</span></h2>
 								<div class="nav_list_jieshao">包含了大量节日素材，轻松解决节日大量活动广告设计的问题</div>
-							</a>
-							<a class="nav_list left" href="#">
-								<h2 class="nav_list_b8"><i>服装设计</i><span>1236</span></h2>
+							</div>
+							<div class="nav_list left">
+								<h2 class="nav_list_b8"><a href="#">服装设计</a><span>1236</span></h2>
 								<div class="nav_list_jieshao">包含了大量节日素材，轻松解决节日大量活动广告设计的问题</div>
-							</a>
+							</div>
 							<div class="clear"></div>
 						</div>
 					</li>
@@ -297,10 +300,11 @@
 					</a>
 				</li>
 			</ul>
-			<ul class="flex-direction-nav">
-				<li><a class="flex-prev" href="javascript:;">Previous</a></li>
-				<li><a class="flex-next" href="javascript:;">Next</a></li>
-			</ul>左右按钮块
+			<!--<ul class="flex-direction-nav">
+		<li><a class="flex-prev" href="javascript:;">Previous</a></li>
+		<li><a class="flex-next" href="javascript:;">Next</a></li>
+	</ul>-->
+			<!--左右按钮块-->
 			<ol id="bannerCtrl" class="flex-control-nav flex-control-paging">
 				<li class="active"><a>1</a></li>
 				<li><a>2</a></li>
@@ -313,45 +317,7 @@
 		<div class="main_content">
 
 			<h2 class="zcq_title">最畅销<a href="#">共56660个素材>></a></h2>
-			<div class="zcq_wrap" id="img_ulwrap">
-				<div class="zcq_div left">
-					<div class="zcq_c1">
-						<div class="zc_list">
-							<img src="img/zcq_img1.gif" />
-							<!--鼠标滑过图片显示隐藏层结构-->
-							<div class="detail_hidden">
-								<a href="pro_detail.html"><img src="img/zcq_img1_big.gif" /></a>
-								<div class="detail_hidden_wrap">
-									<h2>手机移动H5页面模板<span>¥398</span></h2>
-									<div class="detail_user_wrap">
-										<div class="detail_list_img"><a href="pro_detail.html"><img src="img/detail_hidden_img.jpg" /></a></div>
-										<div class="detail_list_name">番茄设计团队</div>
-									</div>
-									<div class="detail_caozuo_wrap">
-										<a class="caozuo_sc" href="#">收藏（2333）</a><a class="caozuo_xz" href="#">下载（2333）</a>
-									</div>
-									<div class="detail_biaoqian_wrap">
-										<ul>
-											<li>标签</li>
-											<li>标签</li>
-											<li>标签</li>
-											<li>标签</li>
-										</ul>
-									</div>
-									<div class="detail_btn_wrap">
-										<a class="detail_xz" href="pro_detail.html">立即下载</a><a class="detail_jrgwc" href="#"><img src="img/hidden_gwc_white.png" /></a>
-									</div>
-								</div>
-							</div>
-							<!--鼠标滑过图片显示隐藏层结构end-->
-						</div>
-					</div>
-					<h2 class="zcq_c2">手机H5页面模板</h2>
-					<div class="zcq_c3">
-						<a class="sc_a" href="#">收藏（2333）</a><a class="xz_a" href="#">下载（2333）</a>
-					</div>
-				</div>
-
+			<div class="zcq_wrap">
 				<div class="zcq_div left">
 					<div class="zcq_c1">
 						<div class="zc_list">
@@ -389,10 +355,47 @@
 						<a class="sc_a" href="#">收藏（2333）</a><a class="xz_a" href="#">下载（2333）</a>
 					</div>
 				</div>
-
+				<div class="zcq_div left">
+					<div class="zcq_c1">
+						<div class="zc_list">
+							<img src="img/zcq_img1.gif" />
+							<!--鼠标滑过图片显示隐藏层结构-->
+							<div class="detail_hidden">
+								<a href="#"><img src="img/zcq_img1_big.gif" /></a>
+								<div class="detail_hidden_wrap">
+									<h2>手机移动H5页面模板<span>¥398</span></h2>
+									<div class="detail_user_wrap">
+										<div class="detail_list_img"><a href="#"><img src="img/detail_hidden_img.jpg" /></a></div>
+										<div class="detail_list_name">番茄设计团队</div>
+									</div>
+									<div class="detail_caozuo_wrap">
+										<a class="caozuo_sc" href="#">收藏（2333）</a><a class="caozuo_xz" href="#">下载（2333）</a>
+									</div>
+									<div class="detail_biaoqian_wrap">
+										<ul>
+											<li>标签</li>
+											<li>标签</li>
+											<li>标签</li>
+											<li>标签</li>
+										</ul>
+									</div>
+									<div class="detail_btn_wrap">
+										<a class="detail_xz" href="#">立即下载</a><a class="detail_jrgwc" href="#"><img src="img/hidden_gwc_white.png" /></a>
+									</div>
+								</div>
+							</div>
+							<!--鼠标滑过图片显示隐藏层结构end-->
+						</div>
+					</div>
+					<h2 class="zcq_c2">手机H5页面模板</h2>
+					<div class="zcq_c3">
+						<a class="sc_a" href="#">收藏（2333）</a><a class="xz_a" href="#">下载（2333）</a>
+					</div>
+				</div>
+				<div></div>
+				<div></div>
 				<div class="clear"></div>
 			</div>
-
 
 			<h2 class="zcq_title rm_title">热门<a href="#">共68965个素材>></a></h2>
 			<div class="zcq_wrap">
@@ -524,17 +527,7 @@
 			</div>
 		</div>
 		<!--底部结构end-->
-		<div class="bottom_gray">
-			<div class="bottom_gray_content auto">
-				<p class="tec bottom_gray_title">特聘法律顾问：江苏政纬律师事务所 宋洪波 | 版权所有 Copyright ©2017 苏州苏杰思网络有限公司旗下网站 苏ICP备14036386号</p>
-				<p class="tec bgray">
-					<a href="#"><img src="img/bottom_gray_img1.png" /></a>
-					<a href="#"><img src="img/bottom_gray_img2.png" /></a>
-					<a href="#"><img src="img/bottom_gray_img3.png" /></a>
-					<a href="#"><img src="img/bottom_gray_img4.png" /></a>
-				</p>
-			</div>
-		</div>
+		<div class="bottom_gray"></div>
 
 		<!--滚动条下拉出现搜索块-->
 		<div class="scroll_wrap">
@@ -564,7 +557,7 @@
 							 onblur="if(this.value==''){this.value='请输入密码';this.style.color='#999999';this.type='text'}" />
 						</div>
 						<div class="login_phone"><a href="javascript:qiehuan_iphone()" href="#">使用手机验证码登陆</a></div>
-						<div class="login_btn"><a href="index_login.html">立即登陆</a></div>
+						<div class="login_btn"><a href="#">立即登陆</a></div>
 						<div class="login_reg"><a href="#">注册麦软账号</a> | <a href="#">忘记密码</a></div>
 					</form>
 				</div>
