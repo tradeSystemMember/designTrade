@@ -1,13 +1,14 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>注册</title>
-		<link rel="stylesheet" href="css/layout.css" />
-		<link rel="stylesheet" href="css/reg.css" />
-		<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
-		<script type="text/javascript" src="js/bannerslider.js"></script>
-		<script type="text/javascript" src="js/layout.js"></script>
+		<link rel="stylesheet" href="/css/layout.css" />
+		<link rel="stylesheet" href="/css/reg.css" />
+		<script type="text/javascript" src="/js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="/js/bannerslider.js"></script>
+		<script type="text/javascript" src="/js/layout.js"></script>
 		<script type="text/javascript">
 
 		</script>
@@ -16,67 +17,67 @@
 	<body>
 		<div class="top_wrap">
 			<div class="top auto">
-				<div class="top_logo top_logo_qiandao left" style="margin-right:20px;"><a href="#"><img src="img/logo.png" /></a></div>
+				<div class="top_logo top_logo_qiandao left" style="margin-right:20px;"><a href="#"><img src="/img/logo.png" /></a></div>
 				<div class="reg_title">用户注册</div>
 				<div class="clear"></div>
 			</div>
 		</div>
 
-		<div class="reg_content">
-			<form action="#" method="post">
-				<table cellpadding="0" cellspacing="0">
-					<tr>
-						<td class="fir">手机号：</td>
-						<td><input type="text" class="reg_in" /></td>
-						<td class="fis">请输入手机号码</td>
-					</tr>
-					<tr style="height: 17px;">
-						<td></td>
-						<td></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="fir">设置密码：</td>
-						<td><input type="text" class="reg_in" /></td>
-						<td class="fis">请设置密码</td>
-					</tr>
-					<tr style="height: 17px;">
-						<td></td>
-						<td></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="fir">确认密码：</td>
-						<td><input type="text" class="reg_in" /></td>
-						<td class="fis">请确认密码</td>
-					</tr>
-					<tr style="height: 17px;">
-						<td></td>
-						<td></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="fir">手机验证码：</td>
-						<td>
-							<input type="text" class="reg_insmall" />
-							<a class="reg_yzm" href="#">获取验证码</a>
-							<div class="clear"></div>
-						</td>
-						<td class="fis">请填写验证码</td>
-					</tr>
-					<tr style="height: 17px;">
-						<td></td>
-						<td></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td></td>
-						<td>
-							<a class="reg_btn" href="#">立即注册</a>
-						</td>
-						<td></td>
-					</tr>
-				</table>
+		<div class="reg_content" >
+			<form th:action="@{/user/register}"  method="post">
+					<table cellpadding="0" cellspacing="0">
+						<tr>
+							<td class="fir">手机号：</td>
+							<td><input type="text" class="reg_in" name="telephone"/></td>
+							<td class="fis">请输入手机号码</td>
+						</tr>
+						<tr style="height: 17px;">
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td class="fir">设置密码：</td>
+							<td><input type="text" class="reg_in" name="password"/></td>
+							<td class="fis">请设置密码</td>
+						</tr>
+						<tr style="height: 17px;">
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td class="fir">确认密码：</td>
+							<td><input type="text" class="reg_in" /></td>
+							<td class="fis">请确认密码</td>
+						</tr>
+						<tr style="height: 17px;">
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td class="fir">手机验证码：</td>
+							<td>
+								<input type="text" class="reg_insmall" />
+								<a class="reg_yzm" href="#">获取验证码</a>
+								<div class="clear"></div>
+							</td>
+							<td class="fis">请填写验证码</td>
+						</tr>
+						<tr style="height: 17px;">
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>
+								<input class="reg_btn" type="submit" value="立即注册" />
+							</td>
+							<td></td>
+						</tr>
+					</table>
 			</form>
 		</div>
 
@@ -134,11 +135,11 @@
 					<ul>
 						<li class="wx_li">
 							<a href="#"><span>微信</span></a>
-							<div class="ewm ewm_position1"><img src="img/weixin_img.png" /></div>
+							<div class="ewm ewm_position1"><img src="/img/weixin_img.png" /></div>
 						</li>
 						<li class="wb_li">
 							<a href="#"><span>微博</span></a>
-							<div class="ewm ewm_position2"><img src="img/weixin_img.png" /></div>
+							<div class="ewm ewm_position2"><img src="/img/weixin_img.png" /></div>
 						</li>
 					</ul>
 				</div>
@@ -151,10 +152,10 @@
 			<div class="bottom_gray_content auto">
 				<p class="tec bottom_gray_title">特聘法律顾问：江苏政纬律师事务所 宋洪波 | 版权所有 Copyright ©2017 苏州苏杰思网络有限公司旗下网站 苏ICP备14036386号</p>
 				<p class="tec bgray">
-					<a href="#"><img src="img/bottom_gray_img1.png" /></a>
-					<a href="#"><img src="img/bottom_gray_img2.png" /></a>
-					<a href="#"><img src="img/bottom_gray_img3.png" /></a>
-					<a href="#"><img src="img/bottom_gray_img4.png" /></a>
+					<a href="#"><img src="/img/bottom_gray_img1.png" /></a>
+					<a href="#"><img src="/img/bottom_gray_img2.png" /></a>
+					<a href="#"><img src="/img/bottom_gray_img3.png" /></a>
+					<a href="#"><img src="/img/bottom_gray_img4.png" /></a>
 				</p>
 			</div>
 		</div>

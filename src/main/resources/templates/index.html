@@ -556,16 +556,16 @@
 				<div class="login_tanchu_logo"><img src="img/logo.png" /></div>
 				<div class="login_tanchu_title">账号登陆</div>
 				<div class="login_tanchu_form">
-					<form action="" method="post">
-						<div class="login_user login_user_inp">登陆账户：<input type="text" value="请输入用户名 或 手机号 或 邮箱" onfocus="if(this.value=='请输入用户名 或 手机号 或 邮箱'){this.value='';this.style.color='#999999'}"
+					<form th:action="@{/user/login}" method="post">
+						<div class="login_user login_user_inp">登陆账户：<input type="text" name="telephone" value="请输入用户名 或 手机号 或 邮箱" onfocus="if(this.value=='请输入用户名 或 手机号 或 邮箱'){this.value='';this.style.color='#999999'}"
 							 onblur="if(this.value==''){this.value='请输入用户名 或 手机号 或 邮箱';this.style.color='#999999'}" />
 						</div>
-						<div class="login_user login_user_pass">登陆密码：<input type="text" value="请输入密码" onfocus="if(this.value=='请输入密码'){this.value='';this.style.color='#999999';this.type='password'}"
+						<div class="login_user login_user_pass">登陆密码：<input type="text" name="password" value="请输入密码" onfocus="if(this.value=='请输入密码'){this.value='';this.style.color='#999999';this.type='password'}"
 							 onblur="if(this.value==''){this.value='请输入密码';this.style.color='#999999';this.type='text'}" />
 						</div>
-						<div class="login_phone"><a href="javascript:qiehuan_iphone()" href="#">使用手机验证码登陆</a></div>
-						<div class="login_btn"><a href="index_login.html">立即登陆</a></div>
-						<div class="login_reg"><a href="#">注册麦软账号</a> | <a href="#">忘记密码</a></div>
+						<div class="login_phone"><a>使用手机验证码登陆</a></div>
+						<input type="submit" class="login_btn" value="立即登录"/>
+						<div class="login_reg"><a>注册麦软账号</a> | <a href="#">忘记密码</a></div>
 					</form>
 				</div>
 			</div>
