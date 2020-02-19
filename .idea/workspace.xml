@@ -99,7 +99,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1582073973387</updated>
-      <workItem from="1582073976833" duration="3909000" />
+      <workItem from="1582073976833" duration="4182000" />
     </task>
     <task id="LOCAL-00001" summary="xzz-2-19:第一次提交">
       <created>1582074635277</created>
@@ -122,7 +122,21 @@
       <option name="project" value="LOCAL" />
       <updated>1582078357687</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="xzz-2-19:第一次提交">
+      <created>1582078428945</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1582078428945</updated>
+    </task>
+    <task id="LOCAL-00005" summary="xzz-2-19:第一次提交">
+      <created>1582078509186</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1582078509186</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -141,10 +155,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="739" y="399" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1920.1040@0.0.1920.1040" timestamp="1582077986429" />
-    <state x="893" y="224" key="CommitChangelistDialog2" timestamp="1582078427960">
+    <state x="893" y="224" key="CommitChangelistDialog2" timestamp="1582078508041">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="893" y="224" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1582078427960" />
+    <state x="893" y="224" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1582078508041" />
     <state x="1188" y="405" key="FileChooserDialogImpl" timestamp="1582077273621">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -185,18 +199,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="752" y="192" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1582076369509" />
-    <state x="404" y="444" key="Vcs.Push.Dialog.v2" timestamp="1582078432349">
+    <state x="404" y="444" key="Vcs.Push.Dialog.v2" timestamp="1582078529281">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="404" y="444" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1582078432349" />
+    <state x="404" y="444" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1582078529281" />
     <state x="636" y="253" width="647" height="534" key="find.popup" timestamp="1582077757306">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="636" y="253" width="647" height="534" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1582077757306" />
-    <state x="647" y="311" key="git4idea.merge.GitPullDialog" timestamp="1582078222010">
+    <state x="647" y="311" key="git4idea.merge.GitPullDialog" timestamp="1582078585627">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="647" y="311" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582078222010" />
+    <state x="647" y="311" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582078585627" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1582076783713">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
