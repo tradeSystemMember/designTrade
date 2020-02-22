@@ -1,71 +1,17 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>首页</title>
 		<link/>
 		<link rel="stylesheet" href="css/layout.css" />
-		<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
-		<script type="text/javascript" src="js/bannerslider.js"></script>
-		<script type="text/javascript" src="js/layout.js"></script>
+		<script type="text/javascript" src="/js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="/js/bannerslider.js"></script>
+		<script type="text/javascript" src="/js/layout.js"></script>
 	</head>
 
 	<body>
-		<div class="top_wrap">
-			<div class="top auto">
-				<div class="top_logo left"><a href="index.html"><img src="img/logo.png" /></a></div>
-				<div class="top_search left">
-					<input type="text" class="text_inp" value="请输入关键字" onfocus="if(this.value=='请输入关键字'){this.value='';this.style.color='#999999'}"
-					 onblur="if(this.value==''){this.value='请输入关键字';this.style.color='#999999'}" />
-					<a class="text_but" href="pro_list.html">确定</a>
-				</div>
-				<div class="top_list right">
-					<ul id="top_xiala">
-						<li class="gwc_li"><i onclick="javascript:showDiv()">购物车</i></li>
-						<li class="sc_li"><i onclick="javascript:showDiv()">收藏</i></li>
-						<li class="zh_li">
-							<div class="zh_d">
-								<a onclick="javascript:showDiv()">登陆</a>
-								<a href="#">/</a>
-								<a href="reg.html">注册</a>
-							</div>
-						</li>
-						<li class="xx_li">
-							<i>
-								<div class="y">
-									<p id="xx_id">消息</p>
-									<div class="xx_xiala" id="xx_c_id">
-										<div><a href="#">注册成功，获得10积分</a></div>
-										<div><a href="#">完善个人资料，获得20积分</a></div>
-										<div><a href="#">发布素材成功，获得20积分</a></div>
-										<div><a href="#">发布素材成功，恭喜你获得20积分积分</a></div>
-										<div><a href="#">发布素材成功，恭喜你获得20积分积分</a></div>
-									</div>
-								</div>
-							</i>
-							<div class="xx_div">1</div>
-						</li>
-						<li class="bz_li">
-							<i>
-								<div class="y">
-									<p id="bz_id">帮助</p>
-									<div class="xx_xiala bz_xiala">
-										<div><a href="#"><span>注册须知</span></a></div>
-										<div><a href="#"><span class="bz_xialaz_icon2">积分规则</span></a></div>
-										<div><a href="#"><span class="bz_xialaz_icon3">设计师须知</span></a></div>
-										<div><a href="#"><span class="bz_xialaz_icon4">发布素材上传规范</span></a></div>
-										<div><a href="#"><span class="bz_xialaz_icon5">更多......</span></a></div>
-									</div>
-								</div>
-							</i>
-						</li>
-					</ul>
-				</div>
-				<div class="clear"></div>
-			</div>
-		</div>
-
+	<div th:insert="~{top :: nav}"></div>
 		<!--导航结构-->
 		<div class="nav_wrap">
 			<div class="nav_content auto">
@@ -283,17 +229,17 @@
 			<ul class="slides">
 				<li>
 					<a title="" target="_blank" href="#">
-						<img width="1920" height="550" alt="" style="background: url(img/banner1.gif) no-repeat center;" src="img/alpha.png">
+						<img width="1920" height="550" alt="" style="background: url(img/banner1.gif) no-repeat center;" src="/img/alpha.png">
 					</a>
 				</li>
 				<li>
 					<a title="" href="#">
-						<img width="1920" height="550" alt="" style="background: url(img/banner1.gif) no-repeat center;" src="img/alpha.png">
+						<img width="1920" height="550" alt="" style="background: url(img/banner1.gif) no-repeat center;" src="/img/alpha.png">
 					</a>
 				</li>
 				<li>
 					<a title="" href="#">
-						<img width="1920" height="550" alt="" style="background: url(img/banner1.gif) no-repeat center;" src="img/alpha.png">
+						<img width="1920" height="550" alt="" style="background: url(img/banner1.gif) no-repeat center;" src="/img/alpha.png">
 					</a>
 				</li>
 			</ul>
@@ -355,7 +301,7 @@
 				<div class="zcq_div left">
 					<div class="zcq_c1">
 						<div class="zc_list">
-							<img src="img/zcq_img1.gif" />
+							<img src="/img/zcq_img1.gif" />
 							<!--鼠标滑过图片显示隐藏层结构-->
 							<div class="detail_hidden">
 								<a href="#"><img src="img/zcq_img1_big.gif" /></a>
@@ -512,11 +458,11 @@
 					<ul>
 						<li class="wx_li">
 							<a href="#"><span>微信</span></a>
-							<div class="ewm ewm_position1"><img src="img/weixin_img.png" /></div>
+							<div class="ewm ewm_position1"><img src="/img/weixin_img.png" /></div>
 						</li>
 						<li class="wb_li">
 							<a href="#"><span>微博</span></a>
-							<div class="ewm ewm_position2"><img src="img/weixin_img.png" /></div>
+							<div class="ewm ewm_position2"><img src="/img/weixin_img.png" /></div>
 						</li>
 					</ul>
 				</div>
@@ -528,10 +474,10 @@
 			<div class="bottom_gray_content auto">
 				<p class="tec bottom_gray_title">特聘法律顾问：江苏政纬律师事务所 宋洪波 | 版权所有 Copyright ©2017 苏州苏杰思网络有限公司旗下网站 苏ICP备14036386号</p>
 				<p class="tec bgray">
-					<a href="#"><img src="img/bottom_gray_img1.png" /></a>
-					<a href="#"><img src="img/bottom_gray_img2.png" /></a>
-					<a href="#"><img src="img/bottom_gray_img3.png" /></a>
-					<a href="#"><img src="img/bottom_gray_img4.png" /></a>
+					<a href="#"><img src="/img/bottom_gray_img1.png" /></a>
+					<a href="#"><img src="/img/bottom_gray_img2.png" /></a>
+					<a href="#"><img src="/img/bottom_gray_img3.png" /></a>
+					<a href="#"><img src="/img/bottom_gray_img4.png" /></a>
 				</p>
 			</div>
 		</div>
