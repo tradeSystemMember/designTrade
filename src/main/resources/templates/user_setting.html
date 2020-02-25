@@ -1,15 +1,14 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>用户中心-设计师主页-基本资料</title>
-		<link rel="stylesheet" href="css/layout.css" />
-		<link rel="stylesheet" href="css/user.css" />
-		<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
-		<script type="text/javascript" src="js/bannerslider.js"></script>
-		<script type="text/javascript" src="js/layout.js"></script>
-		<script type="text/javascript" src="js/birthday.js"></script>
+		<link rel="stylesheet" href="/css/layout.css" />
+		<link rel="stylesheet" href="/css/user.css" />
+		<script type="text/javascript" src="/js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="/js/bannerslider.js"></script>
+		<script type="text/javascript" src="/js/layout.js"></script>
+		<script type="text/javascript" src="/js/birthday.js"></script>
 	</head>
 
 	<body>
@@ -56,51 +55,42 @@
 				<!--基本资料结构-->
 				<div class="user_designer_ziliao_wrap">
 					<div class="user_designer_ziliao_left left">
-						<form>
+						<form th:action="@{/userSet/setting/(id=${session.user.id})}" method="post" enctype ="multipart/form-data">
 							<h2>您填写的信息有利于平台和其它用户识别您</h2>
 							<table cellpadding="0" cellspacing="0" class="user_designer_ziliao_table">
 								<tr>
 									<td class="user_designer_ziliao_td">用&nbsp;户&nbsp;名：</td>
-									<td><input type="text" class="user_designer_ziliao_input" /></td>
+									<td><input type="text" class="user_designer_ziliao_input" th:placeholder="${session.user.username}" name="username" /></td>
 								</tr>
 								<tr>
-									<td class="user_designer_ziliao_td">性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：</td>
-									<td>
-										<ul class="user_designer_ziliao_ul">
-											<li>
-												<a><span class="men_span">男士</span></a>
-											</li>
-											<li>
-												<a><span class="women_span">女士</span></a>
-											</li>
-										</ul>
-									</td>
-								</tr>
-								<tr>
-									<td class="user_designer_ziliao_td">生&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;日：</td>
-									<td>
-										<select onChange="setDays()">
-										</select>
-										<span>年</span>
-										<select onChange="setDays()">
-										</select>
-										<span>月</span>
-										<select>
-										</select>
-										<span>日</span>
-									</td>
+									<td class="user_designer_ziliao_td">修改头像：</td>
+									<td><input type="hidden" id="img_url">
+										<input type="file" onchange="showImg()" id="img_file" name="avatarPic"><img src="" alt="" id="img_id" style="width: 100px"></td>
 								</tr>
 								<tr>
 									<td class="user_designer_ziliao_td">会员等级：</td>
 									<td>LV2</td>
 								</tr>
 								<tr>
-									<td class="user_designer_ziliao_td">经&nbsp;验&nbsp;值：</td>
-									<td>128585</td>
+									<td class="user_designer_ziliao_td">性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：</td>
+									<td>
+										<ul class="user_designer_ziliao_ul">
+											<li>
+												<input type="radio" name="sex" value="男">男
+											</li>
+											<li>
+												<input type="radio" name="sex" value="女">女
+											</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<td class="user_designer_ziliao_td">注册时间：</td>
+									<td><span th:text="${#dates.format(session.user.regTime, 'yyyy-MM-dd HH:mm')}"></span></td>
 								</tr>
 								<tr>
 									<td class="user_designer_ziliao_td">当前积分：</td>
-									<td>128585</td>
+									<td><span th:text="${session.user.account}"></span></td>
 								</tr>
 								<tr>
 									<td class="user_designer_ziliao_td">当前余额：</td>
@@ -108,34 +98,19 @@
 								</tr>
 								<tr>
 									<td class="user_designer_ziliao_td">手机号码：</td>
-									<td>134 7583 7894（已绑定）</td>
-								</tr>
-								<tr>
-									<td class="user_designer_ziliao_td" style="vertical-align:top;">社交账号：</td>
-									<td class="user_designer_ziliao_shejiao_td">
-										<input type="text" class="user_designer_ziliao_input" placeholder="QQ号" />
-										<input type="text" class="user_designer_ziliao_input" placeholder="微信" />
-										<input type="text" class="user_designer_ziliao_input" placeholder="微博账号" />
-									</td>
+									<td><span th:text="${session.user.telephone}+'(已绑定)'"></span></td>
 								</tr>
 								<tr>
 									<td class="user_designer_ziliao_td"></td>
 									<td class="user_designer_ziliao_shejiao_td">
-										<input type="button" class="user_designer_ziliao_btn" value="保存" />
+										<input type="submit" class="user_designer_ziliao_btn" value="保存" />
 									</td>
 								</tr>
+
 							</table>
 						</form>
 					</div>
-					<div class="user_designer_ziliao_right left">
-						<div class="user_designer_ziliao_touxiang_img">
-							<img src="img/user_designer_ziliao_touxiang_img.jpg" width="229" height="220" />
-							<div class="user_designer_ziliao_tishi" style="display:none;">请上传宽高1:1尺寸的图片</div>
-						</div>
-						<div class="user_designer_ziliao_xiugai_touxiang">
-							<a href="#">修改头像</a>
-						</div>
-					</div>
+
 					<div class="clear"></div>
 				</div>
 				<!--基本资料结构end-->
@@ -148,7 +123,7 @@
 		<div class="baozhang_wrap baozhang_wrap_fbfbfb">
 			<div class="baozhang_content auto">
 				<div class="baozhang_div">
-					<img src="img/aqzf_icon.png" />
+					<img src="/img/aqzf_icon.png" />
 					<h2>安全支付</h2>
 					<p>通过在线支付或信用卡支付</p>
 				</div>
@@ -158,12 +133,12 @@
 					<p>顶级团队良心打造专业制作经验</p>
 				</div>
 				<div class="baozhang_div">
-					<img src="img/zxshfw_icon.png" />
+					<img src="/img/zxshfw_icon.png" />
 					<h2>在线售后服务</h2>
 					<p>我们强大的售后团队为您服务</p>
 				</div>
 				<div class="baozhang_div baozhang_lastdiv">
-					<img src="img/fwzs_icon.png" />
+					<img src="/img/fwzs_icon.png" />
 					<h2>服务至上</h2>
 					<p>如果您对所购产品不满意，可申请调换</p>
 				</div>
@@ -228,11 +203,11 @@
 					<ul>
 						<li class="wx_li">
 							<a href="#"><span>微信</span></a>
-							<div class="ewm ewm_position1"><img src="img/weixin_img.png" /></div>
+							<div class="ewm ewm_position1"><img src="/img/weixin_img.png" /></div>
 						</li>
 						<li class="wb_li">
 							<a href="#"><span>微博</span></a>
-							<div class="ewm ewm_position2"><img src="img/weixin_img.png" /></div>
+							<div class="ewm ewm_position2"><img src="/img/weixin_img.png" /></div>
 						</li>
 					</ul>
 				</div>
@@ -245,7 +220,7 @@
 		<!--滚动条下拉出现搜索块-->
 		<div class="scroll_wrap">
 			<div class="scroll_content auto">
-				<div class="scroll_logo left"><a class="totop" href="javascript:;"><img src="img/logo.png" /></a></div>
+				<div class="scroll_logo left"><a class="totop" href="javascript:;"><img src="/img/logo.png" /></a></div>
 				<div class="scroll_search right">
 					<input type="text" class="text_inp1" value="请输入关键字" onfocus="if(this.value=='请输入关键字'){this.value='';this.style.color='#999999'}"
 					 onblur="if(this.value==''){this.value='请输入关键字';this.style.color='#999999'}" />
@@ -259,7 +234,7 @@
 		<!--登陆弹出框-->
 		<div id="popDiv" class="mydiv" style="display:none;">
 			<div class="login_tanchu_wrap">
-				<div class="login_tanchu_logo"><img src="img/logo.png" /></div>
+				<div class="login_tanchu_logo"><img src="/img/logo.png" /></div>
 				<div class="login_tanchu_title">账号登陆</div>
 				<div class="login_tanchu_form">
 					<form action="" method="post">
@@ -269,7 +244,7 @@
 						<div class="login_user login_user_pass">登陆密码：<input type="text" value="请输入密码" onfocus="if(this.value=='请输入密码'){this.value='';this.style.color='#999999';this.type='password'}"
 							 onblur="if(this.value==''){this.value='请输入密码';this.style.color='#999999';this.type='text'}" />
 						</div>
-						<div class="login_phone"><a href="javascript:qiehuan_iphone()" href="#">使用手机验证码登陆</a></div>
+						<div class="login_phone"><a href="javascript:qiehuan_iphone()">使用手机验证码登陆</a></div>
 						<div class="login_btn"><a href="#">立即登陆</a></div>
 						<div class="login_reg"><a href="#">注册麦软账号</a> | <a href="#">忘记密码</a></div>
 					</form>
@@ -279,7 +254,7 @@
 		</div>
 		<div id="popDiv1" class="mydiv" style="display:none;">
 			<div class="login_tanchu_wrap">
-				<div class="login_tanchu_logo"><img src="img/logo.png" /></div>
+				<div class="login_tanchu_logo"><img src="/img/logo.png" /></div>
 				<div class="login_tanchu_title">请登陆后继续操作</div>
 				<div class="login_tanchu_form">
 					<form action="" method="post">
@@ -314,6 +289,15 @@
 									btn.value = '点击发送验证码';
 									nums = 10; //重置时间
 									yzm_disabled.style.backgroundColor = "#e83a17";
+								}
+							}
+							function showImg(){
+								// var img_file =  $("#img_file").val();
+								var file =  document.getElementById('img_file').files[0];
+								var re = new FileReader();
+								re.readAsDataURL(file);
+								re.onload = function(re){
+									$('#img_id').attr("src", re.target.result);
 								}
 							}
 						</script>

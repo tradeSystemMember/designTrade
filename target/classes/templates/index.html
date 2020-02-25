@@ -4,10 +4,10 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>首页</title>
 		<link/>
-		<link rel="stylesheet" href="css/layout.css" />
-		<script type="text/javascript" src="/js/jquery-1.11.3.min.js"></script>
-		<script type="text/javascript" src="/js/bannerslider.js"></script>
-		<script type="text/javascript" src="/js/layout.js"></script>
+		<link rel="stylesheet" th:href="@{~/css/layout.css}" />
+		<script type="text/javascript" th:src="@{~/js/jquery-1.11.3.min.js}"></script>
+		<script type="text/javascript" th:src="@{~/js/bannerslider.js}"></script>
+		<script type="text/javascript" th:src="@{~/js/layout.js}"></script>
 	</head>
 
 	<body>
@@ -229,17 +229,17 @@
 			<ul class="slides">
 				<li>
 					<a title="" target="_blank" href="#">
-						<img width="1920" height="550" alt="" style="background: url(img/banner1.gif) no-repeat center;" src="/img/alpha.png">
+						<img width="1920" height="550" alt="" style="background: url(img/banner1.gif) no-repeat center;" th:src="@{~/img/alpha.png}">
 					</a>
 				</li>
 				<li>
 					<a title="" href="#">
-						<img width="1920" height="550" alt="" style="background: url(img/banner1.gif) no-repeat center;" src="/img/alpha.png">
+						<img width="1920" height="550" alt="" style="background: url(img/banner1.gif) no-repeat center;" th:src="@{~/img/alpha.png}">
 					</a>
 				</li>
 				<li>
 					<a title="" href="#">
-						<img width="1920" height="550" alt="" style="background: url(img/banner1.gif) no-repeat center;" src="/img/alpha.png">
+						<img width="1920" height="550" alt="" style="background: url(img/banner1.gif) no-repeat center;" th:src="@{~/img/alpha.png}">
 					</a>
 				</li>
 			</ul>
@@ -263,14 +263,14 @@
 				<div class="zcq_div left">
 					<div class="zcq_c1">
 						<div class="zc_list">
-							<img src="img/zcq_img1.gif" />
+							<img th:src="@{~/img/zcq_img1.gif}" />
 							<!--鼠标滑过图片显示隐藏层结构-->
 							<div class="detail_hidden">
-								<a href="pro_detail.html"><img src="img/zcq_img1_big.gif" /></a>
+								<a href="pro_detail.html"><img th:src="@{~/img/zcq_img1_big.gif}" /></a>
 								<div class="detail_hidden_wrap">
 									<h2>手机移动H5页面模板<span>¥398</span></h2>
 									<div class="detail_user_wrap">
-										<div class="detail_list_img"><a href="pro_detail.html"><img src="img/detail_hidden_img.jpg" /></a></div>
+										<div class="detail_list_img"><a href="pro_detail.html"><img th:src="@{~/img/detail_hidden_img.jpg}" /></a></div>
 										<div class="detail_list_name">番茄设计团队</div>
 									</div>
 									<div class="detail_caozuo_wrap">
@@ -285,7 +285,7 @@
 										</ul>
 									</div>
 									<div class="detail_btn_wrap">
-										<a class="detail_xz" href="pro_detail.html">立即下载</a><a class="detail_jrgwc" href="#"><img src="img/hidden_gwc_white.png" /></a>
+										<a class="detail_xz" href="pro_detail.html">立即下载</a><a class="detail_jrgwc" href="#"><img th:src="@{~/img/hidden_gwc_white.png}" /></a>
 									</div>
 								</div>
 							</div>
@@ -301,14 +301,14 @@
 				<div class="zcq_div left">
 					<div class="zcq_c1">
 						<div class="zc_list">
-							<img src="/img/zcq_img1.gif" />
+							<img th:src="@{~/img/zcq_img1.gif}" />
 							<!--鼠标滑过图片显示隐藏层结构-->
 							<div class="detail_hidden">
-								<a href="#"><img src="img/zcq_img1_big.gif" /></a>
+								<a href="#"><img th:src="@{~/img/zcq_img1_big.gif}" /></a>
 								<div class="detail_hidden_wrap">
 									<h2>手机移动H5页面模板<span>¥398</span></h2>
 									<div class="detail_user_wrap">
-										<div class="detail_list_img"><a href="#"><img src="img/detail_hidden_img.jpg" /></a></div>
+										<div class="detail_list_img"><a href="#"><img th:src="@{~/img/detail_hidden_img.jpg}" /></a></div>
 										<div class="detail_list_name">番茄设计团队</div>
 									</div>
 									<div class="detail_caozuo_wrap">
@@ -323,7 +323,7 @@
 										</ul>
 									</div>
 									<div class="detail_btn_wrap">
-										<a class="detail_xz" href="#">立即下载</a><a class="detail_jrgwc" href="#"><img src="img/hidden_gwc_white.png" /></a>
+										<a class="detail_xz" href="#">立即下载</a><a class="detail_jrgwc" href="#"><img th:src="@{~/img/hidden_gwc_white.png}" /></a>
 									</div>
 								</div>
 							</div>
@@ -343,7 +343,7 @@
 			<h2 class="zcq_title rm_title">热门<a href="#">共68965个素材>></a></h2>
 			<div class="zcq_wrap">
 				<div class="zcq_div left">
-					<div class="zcq_c1"><img src="img/zcq_img1.gif" /></div>
+					<div class="zcq_c1"><img th:src="@{~/img/zcq_img1.gif}" /></div>
 					<h2 class="zcq_c2">手机H5页面模板</h2>
 					<div class="zcq_c3">
 						<a class="sc_a" href="#">收藏（2333）</a><a class="xz_a" href="#">下载（2333）</a>
@@ -358,7 +358,7 @@
 			<h2 class="zcq_title pfzg_title">评分最高<a href="#">共2856个素材>></a></h2>
 			<div class="zcq_wrap">
 				<div class="zcq_div left">
-					<div class="zcq_c1"><img src="img/zcq_img1.gif" /></div>
+					<div class="zcq_c1"><img th:src="@{~/img/zcq_img1.gif}" /></div>
 					<h2 class="zcq_c2">网站首页模板素材</h2>
 					<div class="zcq_c3">
 						<a class="sc_a" href="#">收藏（2333）</a><a class="xz_a" href="#">下载（2333）</a>
@@ -378,22 +378,22 @@
 		<div class="baozhang_wrap baozhang_wrap_fbfbfb">
 			<div class="baozhang_content auto">
 				<div class="baozhang_div">
-					<img src="img/aqzf_icon.png" />
+					<img th:src="@{~/img/aqzf_icon.png}" />
 					<h2>安全支付</h2>
 					<p>通过在线支付或信用卡支付</p>
 				</div>
 				<div class="baozhang_div">
-					<img src="img/zzjp_icon.png" />
+					<img th:src="@{~/img/zzjp_icon.png}" />
 					<h2>致臻精品</h2>
 					<p>顶级团队良心打造专业制作经验</p>
 				</div>
 				<div class="baozhang_div">
-					<img src="img/zxshfw_icon.png" />
+					<img th:src="@{~/img/zxshfw_icon.png}" />
 					<h2>在线售后服务</h2>
 					<p>我们强大的售后团队为您服务</p>
 				</div>
 				<div class="baozhang_div baozhang_lastdiv">
-					<img src="img/fwzs_icon.png" />
+					<img th:src="@{~/img/fwzs_icon.png}" />
 					<h2>服务至上</h2>
 					<p>如果您对所购产品不满意，可申请调换</p>
 				</div>
@@ -458,11 +458,11 @@
 					<ul>
 						<li class="wx_li">
 							<a href="#"><span>微信</span></a>
-							<div class="ewm ewm_position1"><img src="/img/weixin_img.png" /></div>
+							<div class="ewm ewm_position1"><img th:src="@{~/img/weixin_img.png}" /></div>
 						</li>
 						<li class="wb_li">
 							<a href="#"><span>微博</span></a>
-							<div class="ewm ewm_position2"><img src="/img/weixin_img.png" /></div>
+							<div class="ewm ewm_position2"><img th:src="@{~/img/weixin_img.png}" /></div>
 						</li>
 					</ul>
 				</div>
@@ -474,10 +474,10 @@
 			<div class="bottom_gray_content auto">
 				<p class="tec bottom_gray_title">特聘法律顾问：江苏政纬律师事务所 宋洪波 | 版权所有 Copyright ©2017 苏州苏杰思网络有限公司旗下网站 苏ICP备14036386号</p>
 				<p class="tec bgray">
-					<a href="#"><img src="/img/bottom_gray_img1.png" /></a>
-					<a href="#"><img src="/img/bottom_gray_img2.png" /></a>
-					<a href="#"><img src="/img/bottom_gray_img3.png" /></a>
-					<a href="#"><img src="/img/bottom_gray_img4.png" /></a>
+					<a href="#"><img th:src="@{~/img/bottom_gray_img1.png}" /></a>
+					<a href="#"><img th:src="@{~/img/bottom_gray_img2.png}" /></a>
+					<a href="#"><img th:src="@{~/img/bottom_gray_img3.png}" /></a>
+					<a href="#"><img th:src="@{~/img/bottom_gray_img4.png}" /></a>
 				</p>
 			</div>
 		</div>
@@ -485,7 +485,7 @@
 		<!--滚动条下拉出现搜索块-->
 		<div class="scroll_wrap">
 			<div class="scroll_content auto">
-				<div class="scroll_logo left"><a class="totop" href="javascript:;"><img src="img/logo.png" /></a></div>
+				<div class="scroll_logo left"><a class="totop" href="javascript:;"><img th:src="@{~/img/logo.png}" /></a></div>
 				<div class="scroll_search right">
 					<input type="text" class="text_inp1" value="请输入关键字" onfocus="if(this.value=='请输入关键字'){this.value='';this.style.color='#999999'}"
 					 onblur="if(this.value==''){this.value='请输入关键字';this.style.color='#999999'}" />
@@ -499,19 +499,19 @@
 		<!--登陆弹出框-->
 		<div id="popDiv" class="mydiv" style="display:none;">
 			<div class="login_tanchu_wrap">
-				<div class="login_tanchu_logo"><img src="img/logo.png" /></div>
+				<div class="login_tanchu_logo"><img th:src="@{~/img/logo.png}" /></div>
 				<div class="login_tanchu_title">账号登陆</div>
 				<div class="login_tanchu_form">
-					<form th:action="@{/user/login}" method="post">
-						<div class="login_user login_user_inp">登陆账户：<input type="text" name="telephone" value="请输入用户名 或 手机号 或 邮箱" onfocus="if(this.value=='请输入用户名 或 手机号 或 邮箱'){this.value='';this.style.color='#999999'}"
-							 onblur="if(this.value==''){this.value='请输入用户名 或 手机号 或 邮箱';this.style.color='#999999'}" />
+					<form id="loginForm">
+						<div class="login_user login_user_inp">登陆账户：<input type="text" name="telephone" value="请输入手机号" onfocus="if(this.value=='请输入手机号'){this.value='';this.style.color='#999999'}"
+							 onblur="if(this.value==''){this.value='请输入手机号';this.style.color='#999999'}" />
 						</div>
 						<div class="login_user login_user_pass">登陆密码：<input type="text" name="password" value="请输入密码" onfocus="if(this.value=='请输入密码'){this.value='';this.style.color='#999999';this.type='password'}"
 							 onblur="if(this.value==''){this.value='请输入密码';this.style.color='#999999';this.type='text'}" />
 						</div>
-						<div class="login_phone"><a>使用手机验证码登陆</a></div>
-						<input type="submit" class="login_btn" value="立即登录"/>
-						<div class="login_reg"><a>注册麦软账号</a> | <a href="#">忘记密码</a></div>
+						<div class="login_phone"><span th:text="用户名或密码错误" style="color: red;margin-right: 120px;visibility:hidden" id="spanLogin"></span><a href="javascript:qiehuan_iphone()">使用手机验证码登陆</a></div>
+						<div class="login_btn"><a onclick="login()">立即登陆</a></div>
+						<div class="login_reg"><a href="#">注册麦软账号</a> | <a href="#">忘记密码</a></div>
 					</form>
 				</div>
 			</div>
@@ -519,10 +519,10 @@
 		</div>
 		<div id="popDiv1" class="mydiv" style="display:none;">
 			<div class="login_tanchu_wrap">
-				<div class="login_tanchu_logo"><img src="img/logo.png" /></div>
+				<div class="login_tanchu_logo"><img th:src="@{~/img/logo.png}" /></div>
 				<div class="login_tanchu_title">请登陆后继续操作</div>
 				<div class="login_tanchu_form">
-					<form action="" method="post">
+					<form id="" method="post">
 						<div class="login_user login_user_inp">手机号码：<input type="text" value="请输入手机号" onfocus="if(this.value=='请输入手机号'){this.value='';this.style.color='#999999'}"
 							 onblur="if(this.value==''){this.value='请输入手机号';this.style.color='#999999'}" />
 						</div>
@@ -556,6 +556,22 @@
 									yzm_disabled.style.backgroundColor = "#e83a17";
 								}
 							}
+							function login() {
+								console.info($('#loginForm').serialize());
+								$.ajax({
+									type:"post",
+									dataType:"json",
+									url:"/index/login",
+									data:$('#loginForm').serialize(),
+									success:function () {
+										window.location.reload();
+									},
+									error:function () {
+										$("#spanLogin").css("visibility","visible");
+									}
+								})
+							}
+
 						</script>
 						<div class="login_phone"><a href="javascript:qiehuan_zhanghao()">使用账号密码登陆</a></div>
 						<div class="login_btn"><a href="#">立即登陆</a></div>

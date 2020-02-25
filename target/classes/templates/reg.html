@@ -24,12 +24,12 @@
 		</div>
 
 		<div class="reg_content" >
-			<form th:action="@{/user/register}"  method="post">
+			<form id="loginForm">
 					<table cellpadding="0" cellspacing="0">
 						<tr>
 							<td class="fir">手机号：</td>
-							<td><input type="text" class="reg_in" name="telephone"/></td>
-							<td class="fis">请输入手机号码</td>
+							<td><input type="text" class="reg_in" name="telephone" id="verifyTel"/></td>
+							<td class="fis" id="telResult">请输入手机号码</td>
 						</tr>
 						<tr style="height: 17px;">
 							<td></td>
@@ -38,8 +38,8 @@
 						</tr>
 						<tr>
 							<td class="fir">用户名：</td>
-							<td><input type="text" class="reg_in" name="username"/></td>
-							<td class="fis">请输入用户名</td>
+							<td><input type="text" class="reg_in" name="username" id="verifyUsername"/></td>
+							<td class="fis" id="usernameResult">请输入用户名</td>
 						</tr>
 						<tr style="height: 17px;">
 							<td></td>
@@ -48,8 +48,8 @@
 						</tr>
 						<tr>
 							<td class="fir">设置密码：</td>
-							<td><input type="text" class="reg_in" name="password"/></td>
-							<td class="fis">请设置密码</td>
+							<td><input type="password" class="reg_in" name="password" id="psw"/></td>
+							<td class="fis" id="passResult">请设置密码</td>
 						</tr>
 						<tr style="height: 17px;">
 							<td></td>
@@ -58,8 +58,8 @@
 						</tr>
 						<tr>
 							<td class="fir">确认密码：</td>
-							<td><input type="text" class="reg_in" /></td>
-							<td class="fis">请确认密码</td>
+							<td><input type="password" class="reg_in" id="verifyPsw"/></td>
+							<td class="fis" id="pswResult">请确认密码</td>
 						</tr>
 						<tr style="height: 17px;">
 							<td></td>
@@ -69,7 +69,7 @@
 						<tr>
 							<td class="fir">手机验证码：</td>
 							<td>
-								<input type="text" class="reg_insmall" />
+								<input type="text" class="reg_insmall" placeholder="此处暂时不用填写"/>
 								<a class="reg_yzm" href="#">获取验证码</a>
 								<div class="clear"></div>
 							</td>
@@ -83,7 +83,7 @@
 						<tr>
 							<td></td>
 							<td>
-								<input class="reg_btn" type="submit" value="立即注册" />
+								<a class="reg_btn" href="javascript:return false;" id="loginNow">立即注册</a>
 							</td>
 							<td></td>
 						</tr>
@@ -170,4 +170,90 @@
 			</div>
 		</div>
 	</body>
+	<script type="text/javascript">
+		$("#verifyTel").blur(function () {
+			var telephone=$("#verifyTel").val();
+			if (telephone==null||telephone==""){
+				$("#telResult").html("请填写手机号");
+				$("#telResult").css("color","red");
+			}else{
+				$.ajax({
+					type:"post",
+					dataType:"json",
+					url:"/reg/verifyTel",
+					data:{"telephone":telephone},
+					success:function (data) {
+						if (data==false){
+							$("#telResult").html("×该手机号已经被注册");
+							$("#telResult").css("color","red");
+						}else{
+							$("#telResult").html("√");
+							$("#telResult").css("color","green");
+						}
+					}
+				})
+			}
+		})
+
+
+		$("#verifyUsername").blur(function () {
+			var username=$("#verifyUsername").val();
+			if (username==null||username==""){
+				$("#usernameResult").html("请输入用户名");
+				$("#usernameResult").css("color","red");
+			}else{
+				$.ajax({
+					type:"post",
+					dataType:"json",
+					url:"/reg/verifyUsername",
+					data:{"username":username},
+					success:function (data) {
+						if (data==false){
+							$("#usernameResult").html("×该用户名已经被注册");
+							$("#usernameResult").css("color","red");
+						}else{
+							$("#usernameResult").html("√");
+							$("#usernameResult").css("color","green");
+						}
+					}
+				})
+			}
+		})
+		$("#verifyPsw").blur(function () {
+			var psw = $("#psw").val();
+			var verifyPsw = $("#verifyPsw").val();
+			if (psw!=verifyPsw||verifyPsw==null||verifyPsw==""){
+				$("#pswResult").html("×密码前后不一致");
+				$("#pswResult").css("color","red");
+			}else{
+				$("#pswResult").html("√");
+				$("#pswResult").css("color","green");
+				$("#passResult").html("√");
+				$("#passResult").css("color","green");
+			}
+
+		})
+		$("#loginNow").click(function () {
+			var pawResult=$("#pswResult").html();
+			var usernameResult=$("#usernameResult").html();
+			var telResult=$("#telResult").html();
+			if (telResult == "√" && usernameResult == "√" && pawResult == "√"){
+				$.ajax({
+					url:"/reg/register",
+					data:$("#loginForm").serialize(),
+					dataType:"json",
+					type:"post",
+					success:function (data) {
+						if (data){
+							window.location.href="/reg/loginJump";
+						}else{
+							alert(data)
+						}
+					}
+				})
+			}else{
+				alert("请将信息填写完整")
+			}
+		})
+	</script>
 </html>

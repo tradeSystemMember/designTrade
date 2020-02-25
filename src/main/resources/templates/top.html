@@ -8,21 +8,21 @@
     <nav>
         <div class="top_wrap">
             <div class="top auto">
-                <div class="top_logo left"><a href="#"><img src="/img/logo.png" /></a></div>
+                <div class="top_logo left"><a href="#"><img th:src="@{~/img/logo.png}" /></a></div>
                 <div class="top_search left">
                     <input type="text" class="text_inp" value="请输入关键字" onfocus="if(this.value=='请输入关键字'){this.value='';this.style.color='#999999'}" onblur="if(this.value==''){this.value='请输入关键字';this.style.color='#999999'}" />
                     <a class="text_but" href="#">确定</a>
                 </div>
                 <div class="top_list right">
                     <ul>
-                        <a th:if="${session.user != null}" th:href="@{/user/loginOut}">
+                        <a th:if="${session.user != null}" th:href="@{/index/loginOut}">
                             <li class="zh_li">
                                 <div class="zh_d">
                                     <span th:text="注销"></span>
                                 </div>
                             </li>
                         </a>
-                        <a th:if="${session.user != null}" th:href="@{/user/center}">
+                        <a th:if="${session.user != null}" th:href="@{/center/toCenter}">
                             <li class="zh_li">
                                 <div class="zh_d">
                                     <span th:text="${session.user.getUsername()}"></span>
@@ -31,7 +31,7 @@
                         </a>
                         <li class="zh_li" th:if="${session.user == null}">
                             <div class="zh_d">
-                                <span><a onclick="javascript:showDiv()">登陆</a>/<a th:href="@{/user/register}">注册</a></span>
+                                <span><a onclick="javascript:showDiv()">登陆</a>/<a th:href="@{/index/register}">注册</a></span>
                             </div>
                         </li>
                         <li class="gwc_li"><i>购物车</i></li>
@@ -51,20 +51,6 @@
                             </i>
                             <div class="xx_div">1</div>
                         </li>
-                        <li class="bz_li">
-                            <i>
-                                <div class="y">
-                                    <p id="bz_id">帮助</p>
-                                    <div class="bz_xiala">
-                                        <div><a href="#"><span>注册须知</span></a></div>
-                                        <div><a href="#"><span class="bz_xialaz_icon2">积分规则</span></a></div>
-                                        <div><a href="#"><span class="bz_xialaz_icon3">设计师须知</span></a></div>
-                                        <div><a href="#"><span class="bz_xialaz_icon4">发布素材上传规范</span></a></div>
-                                        <div><a href="#"><span class="bz_xialaz_icon5">更多......</span></a></div>
-                                    </div>
-                                </div>
-                            </i>
-                        </li>
                     </ul>
                 </div>
                 <div class="clear"></div>
@@ -74,5 +60,6 @@
 </div>
 
 </body>
+
 
 </html>

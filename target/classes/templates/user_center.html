@@ -34,16 +34,16 @@
 					<li><a href="user_goumaijilu.html"><span class="user_icon7">购买记录</span></a></li>
 					<li><a href="user_wanchengdingdan.html"><span class="user_icon8">我的订单</span></a></li>
 					<li><a href="user_zhifu_jifenchongzhi.html"><span class="user_icon9">我的钱包</span></a></li>
-					<li><a href="user_setting.html"><span class="user_icon11">个人设置</span></a></li>
+					<li><a th:href="@{/userSet/toUserCenter}"><span class="user_icon11">个人设置</span></a></li>
 				</ul>
 			</div>
 			<div class="user_right right">
 				<div class="user_home">
-					<div class="user_home_img left"><img src="/img/user_name_img.jpg" /></div>
+					<div class="user_home_img left"><img th:src="${session.user.avatar}" style="width: 100px"/></div>
 					<div class="user_home_xinxi left">
 						<div class="user_name">欢迎！<span th:text="${session.user.username}"></span></div>
 						<div class="user_biaoqian">网页设计师</div>
-						<div class="user_jfcz">我的积分：<span th:text="${session.user.account}==null?'0积分':${session.user.account}+'积分'"></span>我的余额：<span>¥20元</span></div>
+						<div class="user_jfcz">我的积分：<span th:text="${session.user.account}==null?'0积分':${session.user.account}+'积分'"></span></div>
 					</div>
 					<div class="user_chongzhi right"><a href="user_zhifu_jifenchongzhi.html">我要充值</a></div>
 				</div>
@@ -54,10 +54,10 @@
 						<div class="zcq_div user_sc_div left">
 							<div class="zcq_c1">
 								<div class="zc_list">
-									<img src="img/zcq_img1.gif" />
+									<img src="/img/zcq_img1.gif" />
 									<!--鼠标滑过图片显示隐藏层结构-->
 									<div class="detail_hidden">
-										<a href="#"><img src="img/zcq_img1_big.gif" /></a>
+										<a href="#"><img src="/img/zcq_img1_big.gif" /></a>
 										<div class="detail_hidden_wrap">
 											<h2>手机移动H5页面模板<span>¥398</span></h2>
 											<div class="detail_user_wrap">
@@ -91,10 +91,10 @@
 						<div class="zcq_div user_sc_div left">
 							<div class="zcq_c1">
 								<div class="zc_list">
-									<img src="img/zcq_img1.gif" />
+									<img src="/img/zcq_img1.gif" />
 									<!--鼠标滑过图片显示隐藏层结构-->
 									<div class="detail_hidden">
-										<a href="#"><img src="img/zcq_img1_big.gif" /></a>
+										<a href="#"><img src="/img/zcq_img1_big.gif" /></a>
 										<div class="detail_hidden_wrap">
 											<h2>手机移动H5页面模板<span>¥398</span></h2>
 											<div class="detail_user_wrap">
@@ -175,22 +175,22 @@
 		<div class="baozhang_wrap baozhang_wrap_fbfbfb">
 			<div class="baozhang_content auto">
 				<div class="baozhang_div">
-					<img src="img/aqzf_icon.png" />
+					<img src="/img/aqzf_icon.png" />
 					<h2>安全支付</h2>
 					<p>通过在线支付或信用卡支付</p>
 				</div>
 				<div class="baozhang_div">
-					<img src="img/zzjp_icon.png" />
+					<img src="/img/zzjp_icon.png" />
 					<h2>致臻精品</h2>
 					<p>顶级团队良心打造专业制作经验</p>
 				</div>
 				<div class="baozhang_div">
-					<img src="img/zxshfw_icon.png" />
+					<img src="/img/zxshfw_icon.png" />
 					<h2>在线售后服务</h2>
 					<p>我们强大的售后团队为您服务</p>
 				</div>
 				<div class="baozhang_div baozhang_lastdiv">
-					<img src="img/fwzs_icon.png" />
+					<img src="/img/fwzs_icon.png" />
 					<h2>服务至上</h2>
 					<p>如果您对所购产品不满意，可申请调换</p>
 				</div>
@@ -296,7 +296,7 @@
 						<div class="login_user login_user_pass">登陆密码：<input type="text" value="请输入密码" onfocus="if(this.value=='请输入密码'){this.value='';this.style.color='#999999';this.type='password'}"
 							 onblur="if(this.value==''){this.value='请输入密码';this.style.color='#999999';this.type='text'}" />
 						</div>
-						<div class="login_phone"><a href="javascript:qiehuan_iphone()" href="#">使用手机验证码登陆</a></div>
+						<div class="login_phone"><a href="javascript:qiehuan_iphone()">使用手机验证码登陆</a></div>
 						<div class="login_btn"><a href="#">立即登陆</a></div>
 						<div class="login_reg"><a href="#">注册麦软账号</a> | <a href="#">忘记密码</a></div>
 					</form>
@@ -306,7 +306,7 @@
 		</div>
 		<div id="popDiv1" class="mydiv" style="display:none;">
 			<div class="login_tanchu_wrap">
-				<div class="login_tanchu_logo"><img src="img/logo.png" /></div>
+				<div class="login_tanchu_logo"><img src="/img/logo.png" /></div>
 				<div class="login_tanchu_title">请登陆后继续操作</div>
 				<div class="login_tanchu_form">
 					<form action="" method="post">

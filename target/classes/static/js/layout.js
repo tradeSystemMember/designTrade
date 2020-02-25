@@ -59,12 +59,33 @@ $(function(){
 
 //产品列表tab切换js
 function change_div(id){
-  for(var i=1;i<=6;i++){
-	  document.getElementById("searchdiv"+i).style.display = "none";
-	  document.getElementById("searchli"+i).className = "";
-	  }
-	  document.getElementById("searchdiv"+id).style.display = "block"
-	  document.getElementById("searchli"+id).className = "search_active";
+	var li_list=document.getElementsByClassName("searchli");
+	var div_list=document.getElementsByClassName("search_list_jg");
+	for(var i=0;i<li_list.length;i++){
+		// div_list[i].style.display = "none";
+		li_list[i].className="searchli";
+	}
+	// document.getElementById("searchdiv"+id).style.display = "block";
+	// document.getElementById("searchli"+id).classList.add = "search_active";
+	var menuid="searchli"+id;
+	var menu=$("#"+menuid+">a").text();
+	// console.log(menu);
+	// $.ajax({
+	// 	url:"/Tradesystem/product/sublist",
+	// 	data:{"menu":menu},
+	// 	dataType:"json",
+	// 	type:"get",
+	// 	success:function(submenu){
+	// 		$("#searchdiv>ul").empty();
+	// 		$.each(submenu,function (k,v) {
+	// 			$("#searchdiv>ul").append("<li><a href=''#'>"+v+"</a></li>")
+	// 			// console.log(k+","+v);
+	// 		});
+	// 	}
+	// });
+	// console.log([[${menu_active}]]);
+	window.location.href="/Tradesystem/product/list?menu="+menu;
+
 }
 
 //用户中心-发布页tab切换js
@@ -124,38 +145,38 @@ function sub(){
 	}       
 }
 
-//结算页JS
-window.onload = function ()
-{
-	//结算页点击使用积分抵扣隐藏展开JS
-	var ojifenb=document.getElementById('jifen_btn');
-	var ojifenh=document.getElementById('jifen_hidden');
-	ojifenb.onclick = function ()
-	{
-		if(ojifenh.style.display=='none')
-		{
-			ojifenh.style.display='block';
-			ojifenb.className="jifen_btn_up";
-		}
-		else	//none
-		{
-			ojifenh.style.display='none';
-			ojifenb.className="jifen_btn_down";
-		}
-	};
-	
-	//结算页支付方式切换JS
-	var ojiesuan=document.getElementById('userjiesuan_id').getElementsByTagName('dd');
-	var i=0;
-	for(i=0;i<ojiesuan.length;i++){
-		ojiesuan[i].onclick=function(){
-		for(i=0;i<ojiesuan.length;i++){
-			ojiesuan[i].className='';
-		};
-			this.className='jisuan_active_dd';
-		};
-	};
-};
+// //结算页JS
+// window.onload = function ()
+// {
+// 	//结算页点击使用积分抵扣隐藏展开JS
+// 	var ojifenb=document.getElementById('jifen_btn');
+// 	var ojifenh=document.getElementById('jifen_hidden');
+// 	ojifenb.onclick = function ()
+// 	{
+// 		if(ojifenh.style.display=='none')
+// 		{
+// 			ojifenh.style.display='block';
+// 			ojifenb.className="jifen_btn_up";
+// 		}
+// 		else	//none
+// 		{
+// 			ojifenh.style.display='none';
+// 			ojifenb.className="jifen_btn_down";
+// 		}
+// 	};
+//
+// 	//结算页支付方式切换JS
+// 	var ojiesuan=document.getElementById('userjiesuan_id').getElementsByTagName('dd');
+// 	var i=0;
+// 	for(i=0;i<ojiesuan.length;i++){
+// 		ojiesuan[i].onclick=function(){
+// 		for(i=0;i<ojiesuan.length;i++){
+// 			ojiesuan[i].className='';
+// 		};
+// 			this.className='jisuan_active_dd';
+// 		};
+// 	};
+// };
 
 //首页导航和缩策图JS鼠标移入1s事件
 $(function(){
