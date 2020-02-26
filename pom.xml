@@ -85,6 +85,13 @@
             <version>0.1.4</version>
             <scope>compile</scope>
         </dependency>
+        <!--springboot security-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+
+
     </dependencies>
 
     <build>

@@ -15,6 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 public class IndexController {
     @Autowired
     private IndexService indexService;
+
     @RequestMapping("/toIndex")
     public String toIndex(){
         return "index";

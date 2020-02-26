@@ -2,189 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="84c9313e-5227-49e3-97b2-f311ba399f89" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_6_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_qiniu_happy_dns_java_0_1_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_qiniu_qiniu_java_sdk_7_2_28.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_squareup_okhttp3_okhttp_3_3_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_squareup_okio_okio_1_8_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gem/tradesystem/config/UploadProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gem/tradesystem/controller/RegController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gem/tradesystem/controller/UserCenterController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gem/tradesystem/controller/UserSettingController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gem/tradesystem/mapper/RegMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gem/tradesystem/mapper/UserSettingMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gem/tradesystem/service/IndexService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gem/tradesystem/service/RegService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gem/tradesystem/service/UploadFile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gem/tradesystem/service/UserSettingService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gem/tradesystem/service/impl/IndexServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gem/tradesystem/service/impl/RegServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gem/tradesystem/service/impl/UploadFileQiniu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gem/tradesystem/service/impl/UserSettingServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/loginJump.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/gem/tradesystem/config/UploadProperties$Local.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/gem/tradesystem/config/UploadProperties$Qiniu.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/gem/tradesystem/config/UploadProperties.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/gem/tradesystem/controller/ProductController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/gem/tradesystem/controller/RegController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/gem/tradesystem/controller/UserCenterController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/gem/tradesystem/controller/UserSettingController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/gem/tradesystem/entity/Sucai.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/gem/tradesystem/mapper/IndexMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/gem/tradesystem/mapper/RegMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/gem/tradesystem/mapper/SucaiMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/gem/tradesystem/mapper/UserSettingMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/gem/tradesystem/service/IndexService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/gem/tradesystem/service/RegService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/gem/tradesystem/service/SucaiService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/gem/tradesystem/service/UploadFile.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/gem/tradesystem/service/UserSettingService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/gem/tradesystem/service/impl/IndexServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/gem/tradesystem/service/impl/RegServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/gem/tradesystem/service/impl/SucaiServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/gem/tradesystem/service/impl/UploadFileQiniu.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/gem/tradesystem/service/impl/UserSettingServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/css/admin.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/css/layui.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/css/layui.mobile.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/css/login.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/css/modules/code.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/css/modules/laydate/default/laydate.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/css/modules/layer/default/icon-ext.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/css/modules/layer/default/icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/css/modules/layer/default/layer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/css/modules/layer/default/loading-0.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/css/modules/layer/default/loading-1.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/css/modules/layer/default/loading-2.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/css/view.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/font/ai.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/font/ai.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/font/ai.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/font/ai.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/font/iconfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/font/iconfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/font/iconfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/font/iconfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/images/face/0.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/images/face/1.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/images/face/10.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/images/face/11.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/images/face/12.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/images/face/13.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/images/face/14.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/images/face/15.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/images/face/16.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/images/face/17.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/images/face/18.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/images/face/19.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/images/face/2.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/images/face/20.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/images/face/21.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/images/face/22.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/images/face/23.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/images/face/24.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/images/face/25.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/images/face/26.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/images/face/27.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/images/face/28.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/images/face/29.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/images/face/3.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/images/face/30.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/images/face/31.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/images/face/32.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/images/face/33.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/images/face/34.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/images/face/35.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/images/face/36.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/images/face/37.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/images/face/38.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/images/face/39.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/images/face/4.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/images/face/40.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/images/face/41.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/images/face/42.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/images/face/43.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/images/face/44.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/images/face/45.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/images/face/46.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/images/face/47.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/images/face/48.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/images/face/49.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/images/face/5.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/images/face/50.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/images/face/51.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/images/face/52.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/images/face/53.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/images/face/54.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/images/face/55.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/images/face/56.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/images/face/57.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/images/face/58.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/images/face/59.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/images/face/6.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/images/face/60.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/images/face/61.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/images/face/62.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/images/face/63.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/images/face/64.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/images/face/65.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/images/face/66.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/images/face/67.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/images/face/68.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/images/face/69.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/images/face/7.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/images/face/70.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/images/face/71.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/images/face/8.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/images/face/9.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/images/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/lay/modules/carousel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/lay/modules/code.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/lay/modules/element.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/lay/modules/flow.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/lay/modules/form.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/lay/modules/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/lay/modules/laydate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/lay/modules/layedit.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/lay/modules/layer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/lay/modules/laypage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/lay/modules/laytpl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/lay/modules/mobile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/lay/modules/table.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/lay/modules/tree.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/lay/modules/upload.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/lay/modules/util.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/layui.all.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/layui.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/loginJump.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/designTrade.iml" beforeDir="false" afterPath="$PROJECT_DIR$/designTrade.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/gem/tradesystem/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gem/tradesystem/controller/IndexController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gem/tradesystem/controller/UserController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gem/tradesystem/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gem/tradesystem/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gem/tradesystem/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gem/tradesystem/mapper/IndexMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gem/tradesystem/service/UserService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reg.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reg.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/top.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/top.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user_center.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user_center.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user_setting.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user_setting.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gem/tradesystem/mapper/IndexMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gem/tradesystem/mapper/IndexMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gem/tradesystem/service/impl/IndexServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gem/tradesystem/service/impl/IndexServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gem/tradesystem/service/impl/RegServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gem/tradesystem/service/impl/RegServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/gem/tradesystem/controller/IndexController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gem/tradesystem/controller/IndexController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gem/tradesystem/controller/UserController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gem/tradesystem/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gem/tradesystem/entity/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gem/tradesystem/mapper/UserMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gem/tradesystem/service/UserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/layout.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/layout.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/layout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/pro_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/pro_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/reg.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/reg.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/top.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/top.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/user_center.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/user_center.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/user_setting.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/user_setting.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gem/tradesystem/service/impl/IndexServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gem/tradesystem/service/impl/IndexServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gem/tradesystem/service/impl/RegServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gem/tradesystem/service/impl/RegServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,6 +35,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/main/java/com/gem/tradesystem/service/impl/RegServiceImpl.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/gem/tradesystem/controller/RegController.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/gem/tradesystem/service/impl/IndexServiceImpl.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -240,7 +68,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="E:/Project/SpringBootProject/Community" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/gem/tradesystem/config" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -256,14 +84,15 @@
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.gem.tradesystem" />
     </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.gem.tradesystem.mapper" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Projec\designTrade\src\main\java\com\gem\tradesystem\config" />
       <recent name="E:\Projec\designTrade\src\main\resources\templates" />
       <recent name="E:\Project\designTrade\src\main\resources" />
       <recent name="E:\Project\designTrade\src\main\resources\templates" />
       <recent name="E:\Project\designTrade\src\main\resources\static" />
-    </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.gem.tradesystem.mapper" />
     </key>
   </component>
   <component name="RunManager">
@@ -308,7 +137,8 @@
       <workItem from="1582244795289" duration="17008000" />
       <workItem from="1582331816415" duration="17102000" />
       <workItem from="1582502734767" duration="31620000" />
-      <workItem from="1582590509526" duration="15472000" />
+      <workItem from="1582590509526" duration="16158000" />
+      <workItem from="1582676880410" duration="3590000" />
     </task>
     <task id="LOCAL-00001" summary="xzz-2-19:第一次提交">
       <created>1582074635277</created>
@@ -387,7 +217,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582188315892</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="xzz-2-25:第一次提交">
+      <created>1582633470360</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1582633470360</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -398,9 +235,14 @@
     <MESSAGE value="xzz-2-19:第二次提交" />
     <MESSAGE value="xzz-2-19:第三次提交" />
     <MESSAGE value="xzz-2-20:第一次提交" />
-    <option name="LAST_COMMIT_MESSAGE" value="xzz-2-20:第一次提交" />
+    <MESSAGE value="xzz-2-25:第一次提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="xzz-2-25:第一次提交" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="552" y="178" key="#Inspections" timestamp="1582679594978">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="178" key="#Inspections/0.0.1920.1040@0.0.1920.1040" timestamp="1582679594978" />
     <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1582609230651">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -421,10 +263,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1001" y="383" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582609353524" />
-    <state x="516" y="98" key="CommitChangelistDialog2" timestamp="1582633424821">
+    <state x="516" y="98" key="CommitChangelistDialog2" timestamp="1582633466628">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="516" y="98" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1582633424821" />
+    <state x="516" y="98" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1582633466628" />
     <state x="368" y="183" key="DiffContextDialog" timestamp="1582078846438">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -433,38 +275,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="915" y="327" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1582616404070" />
-    <state width="1877" height="187" key="GridCell.Tab.0.bottom" timestamp="1582614539785">
+    <state width="1877" height="63" key="GridCell.Tab.0.bottom" timestamp="1582680646895">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="187" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1582614539785" />
-    <state width="1877" height="187" key="GridCell.Tab.0.center" timestamp="1582614539785">
+    <state width="1877" height="63" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1582680646895" />
+    <state width="1877" height="63" key="GridCell.Tab.0.center" timestamp="1582680646895">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="187" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1582614539785" />
-    <state width="1877" height="187" key="GridCell.Tab.0.left" timestamp="1582614539785">
+    <state width="1877" height="63" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1582680646895" />
+    <state width="1877" height="63" key="GridCell.Tab.0.left" timestamp="1582680646895">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="187" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1582614539785" />
-    <state width="1877" height="187" key="GridCell.Tab.0.right" timestamp="1582614539785">
+    <state width="1877" height="63" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1582680646895" />
+    <state width="1877" height="63" key="GridCell.Tab.0.right" timestamp="1582680646895">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="187" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1582614539785" />
-    <state width="1877" height="187" key="GridCell.Tab.1.bottom" timestamp="1582614539786">
+    <state width="1877" height="63" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1582680646895" />
+    <state width="1877" height="63" key="GridCell.Tab.1.bottom" timestamp="1582680646896">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="187" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1582614539786" />
-    <state width="1877" height="187" key="GridCell.Tab.1.center" timestamp="1582614539786">
+    <state width="1877" height="63" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1582680646896" />
+    <state width="1877" height="63" key="GridCell.Tab.1.center" timestamp="1582680646896">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="187" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1582614539786" />
-    <state width="1877" height="187" key="GridCell.Tab.1.left" timestamp="1582614539786">
+    <state width="1877" height="63" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1582680646896" />
+    <state width="1877" height="63" key="GridCell.Tab.1.left" timestamp="1582680646895">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="187" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1582614539786" />
-    <state width="1877" height="187" key="GridCell.Tab.1.right" timestamp="1582614539786">
+    <state width="1877" height="63" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1582680646895" />
+    <state width="1877" height="63" key="GridCell.Tab.1.right" timestamp="1582680646896">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="187" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1582614539786" />
+    <state width="1877" height="63" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1582680646896" />
     <state width="1357" height="295" key="GridCell.Tab.2.bottom" timestamp="1582549262467">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -481,18 +323,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1357" height="295" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1582549262467" />
-    <state x="781" y="205" key="Maven.ArtifactSearchDialog" timestamp="1582351850482">
+    <state x="781" y="205" key="Maven.ArtifactSearchDialog" timestamp="1582677703949">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="781" y="205" key="Maven.ArtifactSearchDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582351850482" />
+    <state x="781" y="205" key="Maven.ArtifactSearchDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582677703949" />
     <state x="752" y="189" key="SettingsEditor" timestamp="1582354272877">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="752" y="189" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1582354272877" />
-    <state x="404" y="444" key="Vcs.Push.Dialog.v2" timestamp="1582188320180">
+    <state x="404" y="444" key="Vcs.Push.Dialog.v2" timestamp="1582633474498">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="404" y="444" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1582188320180" />
+    <state x="404" y="444" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1582633474498" />
     <state x="752" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1582078776559">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

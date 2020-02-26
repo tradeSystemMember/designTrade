@@ -6,7 +6,6 @@ import org.apache.ibatis.annotations.Select;
 
 @Mapper
 public interface IndexMapper {
-    @Select("select* from user where telephone=#{telephone} and password=#{password}")
-    User selectUser(String telephone, String password);
-
+    @Select("select* from user where telephone = #{telephone}")
+    User selectUserByTel(String telephone);
 }
