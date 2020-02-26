@@ -1,18 +1,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>详情页</title>
-		<link rel="stylesheet" href="css/layout.css" />
-		<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
-		<script type="text/javascript" src="js/bannerslider.js"></script>
-		<script type="text/javascript" src="js/layout.js"></script>
+		<link rel="stylesheet" th:href="@{/css/layout.css}" />
+		<script type="text/javascript" th:src="@{/js/jquery-1.11.3.min.js}"></script>
+		<script type="text/javascript" th:src="@{/js/bannerslider.js}"></script>
+		<script type="text/javascript" th:src="@{/js/layout.js}"></script>
 	</head>
 
 	<body>
 		<div class="top_wrap">
 			<div class="top auto">
-				<div class="top_logo left"><a href="index.html"><img src="img/logo.png" /></a></div>
+				<div class="top_logo left"><a href="index.html"><img th:src="@{/img/logo.png}" /></a></div>
 				<div class="top_search left">
 					<input type="text" class="text_inp" value="请输入关键字" onfocus="if(this.value=='请输入关键字'){this.value='';this.style.color='#999999'}"
 					 onblur="if(this.value==''){this.value='请输入关键字';this.style.color='#999999'}" />
@@ -66,36 +66,36 @@
 
 		<!--1200结构-->
 		<div class="pro_wrap auto">
-			<h2 class="weizhi_title">位置：<a href="#">首页</a> > <a href="#">分类</a> > <a href="#">UI</a> > 素材标题</h2>
+			<h2 class="weizhi_title">位置：<a href="#" th:href="@{/}">首页</a> > <a href="#">分类</a> > <a href="#">UI</a> > [[${sucai.name}]]</h2>
 
 			<div class="pro_detail_wrap">
 				<div class="pro_detail_left left">
-					<h2>手机UI界面展示模板<span>发布时间：2017-03-07</span></h2>
-					<div class="pro_detail_img"><img src="img/pro_detail_img.jpg" /></div>
-					<div class="pro_detail_title">素材说明素材说明素材说明素材说明素材说明素材说明素材说明素材说明素材说明素材说明素材说明素材说明素材说明素材说明素材说明素材说明素材说明素材说明素材说明素材说明素材说明素材说明</div>
+					<h2>[[${sucai.name}]]<span>发布时间：[[${#dates.format(sucai.createtime,"yyyy-MM-dd")}]]</span></h2>
+					<div class="pro_detail_img"><img th:src="@{/img/pro_detail_img.jpg}" /></div>
+					<div class="pro_detail_title" th:text="${sucai.description}">素材说明素材说明素材说明素材说明素材说明素材说明素材说明素材说明素材说明素材说明素材说明素材说明素材说明素材说明素材说明素材说明素材说明素材说明素材说明素材说明素材说明素材说明</div>
 					<div class="pro_detail_biaoqian">
 						<ul>
-							<li>标签</li>
-							<li>标签</li>
-							<li>标签</li>
-							<li>标签</li>
-							<li>标签</li>
-							<li>标签</li>
-							<li>标签</li>
-							<li>标签</li>
-							<li>标签</li>
-							<li>标签</li>
+							<li th:each="tag:${taglist}" th:text="${tag}">标签</li>
+<!--							<li>标签</li>-->
+<!--							<li>标签</li>-->
+<!--							<li>标签</li>-->
+<!--							<li>标签</li>-->
+<!--							<li>标签</li>-->
+<!--							<li>标签</li>-->
+<!--							<li>标签</li>-->
+<!--							<li>标签</li>-->
+<!--							<li>标签</li>-->
 						</ul>
 					</div>
 				</div>
 				<div class="pro_detail_right right">
 					<div class="pro_detail_name">
-						<div class="pro_detail_m left"><img src="img/pro_detail_name_img.jpg" /></div>
-						<div class="pro_detail_n ">番茄设计部落</div>
-						<div class="pro_detail_b">原创设计师</div>
+						<div class="pro_detail_m left"><img th:src="@{/img/pro_detail_name_img.jpg}" /></div>
+						<div class="pro_detail_n " th:text="${sucai.name}">番茄设计部落</div>
+						<div class="pro_detail_b" th:text="${sucai.author}">原创设计师</div>
 					</div>
 					<div class="pro_detail_price">
-						价格：<span>¥10.00</span>
+						价格：<span>¥[[${sucai.money}]]</span>
 					</div>
 					<div class="pro_detail_btn">
 						<a class="pro_detail_xz left" href="down_jifenbuzu_login.html">立即下载</a>
@@ -104,19 +104,19 @@
 					</div>
 					<div class="pro_detail_caozuo">
 						<div class="pro_detail_czcontent detail_caozuo_wrap">
-							<a class="caozuo_sc" href="#">收藏（2333）</a><a class="caozuo_xz" href="#">下载（2333）</a><span class="caozuo_ll" href="#">浏览</span>
+							<a class="caozuo_sc" href="#">收藏（[[${sucai.favnum}]]）</a><a class="caozuo_xz" href="#">下载（[[${sucai.downnum}]]）</a><span class="caozuo_ll" href="#">浏览</span>
 						</div>
 					</div>
 					<div class="pro_detail_miaoshu">
 						<table cellpadding="0" cellspacing="0" border="0">
 							<tr>
 								<td class="pro_detail_td">编号</td>
-								<td colspan="2">1999302</td>
+								<td colspan="2" th:text="${sucai.num}">1999302</td>
 							</tr>
-							<tr>
-								<td class="pro_detail_td">分类</td>
-								<td colspan="2">原创-图片素材-DM</td>
-							</tr>
+<!--							<tr>-->
+<!--								<td class="pro_detail_td">分类</td>-->
+<!--								<td colspan="2">原创-图片素材-DM</td>-->
+<!--							</tr>-->
 							<tr>
 								<td class="pro_detail_td">格式</td>
 								<td colspan="2">psd jpg</td>
@@ -132,7 +132,7 @@
 							</tr>
 						</table>
 					</div>
-					<div class="pro_detail_joindesinger"><a href="#"><img src="img/pro_detail_joindesinger.jpg" /></a></div>
+					<div class="pro_detail_joindesinger"><a href="#"><img th:src="@{/img/pro_detail_joindesinger.jpg}" /></a></div>
 				</div>
 				<div class="clear"></div>
 			</div>
@@ -265,7 +265,7 @@
 						<div class="login_user login_user_pass">登陆密码：<input type="text" value="请输入密码" onfocus="if(this.value=='请输入密码'){this.value='';this.style.color='#999999';this.type='password'}"
 							 onblur="if(this.value==''){this.value='请输入密码';this.style.color='#999999';this.type='text'}" />
 						</div>
-						<div class="login_phone"><a href="javascript:qiehuan_iphone()" href="#">使用手机验证码登陆</a></div>
+						<div class="login_phone"><a href="javascript:qiehuan_iphone()" >使用手机验证码登陆</a></div>
 						<div class="login_btn"><a href="#">立即登陆</a></div>
 						<div class="login_reg"><a href="#">注册麦软账号</a> | <a href="#">忘记密码</a></div>
 					</form>

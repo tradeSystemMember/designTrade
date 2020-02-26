@@ -14,6 +14,12 @@ public class SucaiServiceImpl implements SucaiService {
     private SucaiMapper sucaiMapper;
 
     @Override
+    public Sucai getOneById(Integer id) {
+        Sucai sucai=sucaiMapper.getOneById(id);
+        return sucai;
+    }
+
+    @Override
     public Integer getCount() {
         Integer count=sucaiMapper.getCount();
         return count;
@@ -85,6 +91,54 @@ public class SucaiServiceImpl implements SucaiService {
         List<Sucai> slist=sucaiMapper.getMenuPageList(typename,page,size);
         return slist;
     }
+
+    @Override
+    public List<String> getTags(Integer sucaiid) {
+        List<String> taglist=sucaiMapper.getTags(sucaiid);
+        return taglist;
+    }
+
+    @Override
+    public String getPMenu(String typename) {
+        String pMenu=sucaiMapper.getPMenu(typename);
+        return pMenu;
+    }
+
+    @Override
+    public List<Sucai> getSearchList(String search) {
+        List<Sucai> slist=sucaiMapper.getSearchList(search);
+        return slist;
+    }
+
+    @Override
+    public Integer getSearchCount(String search) {
+        Integer num=sucaiMapper.getSearchCount(search);
+        return num;
+    }
+
+    @Override
+    public List<Sucai> getSearchPageList(String search, Integer page, Integer size) {
+        List<Sucai> slist=sucaiMapper.getSearchPageList(search,page,size);
+        return slist;
+    }
+
+    @Override
+    public int updateFav(Integer id) {
+        int i=sucaiMapper.updateFav(id);
+        return i;
+    }
+
+    @Override
+    public int insertOneFav(Integer sucaiid, Integer userid) {
+        int i=sucaiMapper.insertOneFav(sucaiid,userid);
+        return i;
+    }
+
+//    @Override
+//    public Sucai getOneSu(Integer id) {
+//        Sucai su=sucaiMapper.getOneSu(id);
+//        return su;
+//    }
 
 
 }

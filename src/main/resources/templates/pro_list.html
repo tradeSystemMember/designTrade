@@ -11,13 +11,28 @@
 	</head>
 
 	<body>
+	<input type="hidden" th:value="${session.user.username}"/>
 		<div class="top_wrap">
 			<div class="top auto">
 				<div class="top_logo left"><a th:href="@{/}"><img th:src="@{/img/logo.png}" /></a></div>
 				<div class="top_search left">
-					<input type="text" class="text_inp" value="请输入关键字" onfocus="if(this.value=='请输入关键字'){this.value='';this.style.color='#999999'}"
+					<input type="text" class="text_inp" value="请输入关键字" th:value="${search}?${search}:'请输入关键字'" onfocus="if(this.value=='请输入关键字'){this.value='';this.style.color='#999999'}"
 					 onblur="if(this.value==''){this.value='请输入关键字';this.style.color='#999999'}" />
-					<a class="text_but" href="#">确定</a>
+					<script th:inline="javascript">
+						var contextPath=[[${#request.getContextPath()}]];
+					</script>
+					<script type="text/javascript">
+						function jumpToSearch() {
+							// jumpToSearchconsole.log("能进入js函数");
+							var searchtext=$(".top_search .text_inp").val();
+							if(searchtext=="请输入关键字")
+								window.location.href=contextPath+"/product/list";
+							else
+								window.location.href=contextPath+"/product/list?search="+searchtext;
+							// console.log(searchtext);
+						}
+					</script>
+					<a class="text_but" href="#" onclick="jumpToSearch()">确定</a>
 				</div>
 				<div class="top_list right">
 					<ul>
@@ -67,7 +82,7 @@
 
 		<!--1200结构-->
 		<div class="pro_wrap auto">
-			<h2 class="weizhi_title">位置：<a href="#">首页</a> > 关键词</h2>
+			<h2 class="weizhi_title">位置：<a href="#" th:href="@{/}">首页</a> > 关键词</h2>
 
 			<input type="hidden" name="menu_active" th:value="${menu_active}">
 			<input type="hidden" name="submenu_active" th:value="${submenu_active}">
@@ -100,22 +115,41 @@
 							<img th:src="@{/img/zcq_img1.gif}" />
 							<!--鼠标滑过图片显示隐藏层结构-->
 							<div class="detail_hidden">
+								<input type="hidden" class="sucaiid" th:value="${sucai.id}"/>
 								<a href="#"><img th:src="@{/img/zcq_img1_big.gif}" /></a>
 								<div class="detail_hidden_wrap">
-									<h2 th:text="${sucai.name}">手机移动H5页面模板<span>¥398</span></h2>
+<!--									<h2 th:text="${sucai.name}">手机移动H5页面模板<span th:text="${sucai.money}">¥398</span></h2>-->
+									<h2 >[[${sucai.name}]]<span th:text="'¥'+${sucai.money}">¥398</span></h2>
 									<div class="detail_user_wrap">
 										<div class="detail_list_img"><a href="#"><img th:src="@{/img/detail_hidden_img.jpg}" /></a></div>
-										<div class="detail_list_name">番茄设计团队</div>
+										<div class="detail_list_name" th:text="${sucai.author}">番茄设计团队</div>
 									</div>
 									<div class="detail_caozuo_wrap">
-										<a class="caozuo_sc" href="#">收藏（2333）</a><a class="caozuo_xz" href="#">下载（2333）</a>
+										<script type="text/javascript">
+											function fav(id) {
+												console.log(id);
+												$.ajax(
+														{
+															url:"/Tradesystem/product/addfav",
+															data:{"sid":id},
+															// dataType:"json",
+															type:"post",
+															success:function(taglist){
+																alert(taglist);
+															}
+														}
+												);
+
+											}
+										</script>
+										<a class="caozuo_sc" href="javascript:void(0);" th:onclick="fav([[${sucai.id}]])" th:text="'收藏('+${sucai.favnum}+')'">收藏（2333）</a><a class="caozuo_xz" href="#" th:text="'下载('+${sucai.downnum}+')'">下载（2333）</a>
 									</div>
 									<div class="detail_biaoqian_wrap">
 										<ul>
-											<li>标签</li>
-											<li>标签</li>
-											<li>标签</li>
-											<li>标签</li>
+<!--											<li>标签</li>-->
+<!--											<li>标签</li>-->
+<!--											<li>标签</li>-->
+<!--											<li>标签</li>-->
 										</ul>
 									</div>
 									<div class="detail_btn_wrap">
@@ -128,7 +162,7 @@
 					</div>
 					<h2 class="zcq_c2" th:text="${sucai.name}">手机H5页面模板</h2>
 					<div class="zcq_c3">
-						<a class="sc_a" href="#">收藏（2333）</a><a class="xz_a" href="pro_detail.html">下载（2333）</a>
+						<a class="sc_a" href="javascript:;" th:text="'收藏('+${sucai.favnum}+')'">收藏（2333）</a><a class="xz_a" th:href="@{/product/detail(id=${sucai.id})}" th:text="'下载('+${sucai.downnum}+')'">下载（2333）</a>
 					</div>
 				</div>
 <!--				<div class="zcq_div left">-->
@@ -210,7 +244,7 @@
 
 						//非第一次执行
 						if (!first) {
-							window.location.href = "/Tradesystem/product/list?menu=[[${menu_active}]]&submenu=[[${submenu_active}]]&curr=" + obj.curr;
+							window.location.href =contextPath+"/product/list?menu=[[${menu_active}]]&submenu=[[${submenu_active}]]&search=[[${search}]]&curr=" + obj.curr;
 						}
 					}
 				});
@@ -361,11 +395,22 @@
 		<!--滚动条下拉出现搜索块-->
 		<div class="scroll_wrap">
 			<div class="scroll_content auto">
-				<div class="scroll_logo left"><a class="totop" href="javascript:;"><img src="img/logo.png" /></a></div>
+				<div class="scroll_logo left"><a class="totop" href="javascript:;"><img th:src="@{/img/logo.png}" /></a></div>
 				<div class="scroll_search right">
-					<input type="text" class="text_inp1" value="请输入关键字" onfocus="if(this.value=='请输入关键字'){this.value='';this.style.color='#999999'}"
+					<input type="text" class="text_inp1" value="请输入关键字" th:value="${search}?${search}:'请输入关键字'" onfocus="if(this.value=='请输入关键字'){this.value='';this.style.color='#999999'}"
 					 onblur="if(this.value==''){this.value='请输入关键字';this.style.color='#999999'}" />
-					<a href="#" class="text_but1">确定</a>
+					<script type="text/javascript">
+						function jumpToSearch1() {
+							// jumpToSearchconsole.log("能进入js函数");
+							var searchtext=$(".scroll_search .text_inp1").val();
+							if(searchtext=="请输入关键字")
+								window.location.href=contextPath+"/product/list";
+							else
+								window.location.href=contextPath+"/product/list?search="+searchtext;
+							// console.log(searchtext);
+						}
+					</script>
+					<a href="#" class="text_but1" onclick="jumpToSearch1()">确定</a>
 				</div>
 				<div class="clear"></div>
 			</div>
