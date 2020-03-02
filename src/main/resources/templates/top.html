@@ -8,10 +8,26 @@
     <nav>
         <div class="top_wrap">
             <div class="top auto">
-                <div class="top_logo left"><a href="#"><img th:src="@{~/img/logo.png}" /></a></div>
+                <div class="top_logo left"><a href="#"><img th:src="@{/img/logo.png}" /></a></div>
                 <div class="top_search left">
-                    <input type="text" class="text_inp" value="请输入关键字" onfocus="if(this.value=='请输入关键字'){this.value='';this.style.color='#999999'}" onblur="if(this.value==''){this.value='请输入关键字';this.style.color='#999999'}" />
-                    <a class="text_but" href="#">确定</a>
+                    <input type="text" class="text_inp" th:value="${search}?${search}:'请输入关键字'" value="请输入关键字" onfocus="if(this.value=='请输入关键字'){this.value='';this.style.color='#999999'}" onblur="if(this.value==''){this.value='请输入关键字';this.style.color='#999999'}" />
+                    <!--    搜索功能新增 script               -->
+                    <script th:inline="javascript">
+                        var contextPath=[[${#request.getContextPath()}]];
+                    </script>
+                    <script type="text/javascript">
+                        function jumpToSearch() {
+                            // jumpToSearchconsole.log("能进入js函数");
+                            var searchtext=$(".top_search .text_inp").val();
+                            if(searchtext=="请输入关键字")
+                                window.location.href=contextPath+"/product/list";
+                            else
+                                window.location.href=contextPath+"/product/list?search="+searchtext;
+                            // console.log(searchtext);
+                        }
+                    </script>
+                    <!--    搜索功能新增 script结束               -->
+                    <a class="text_but" href="#" onclick="jumpToSearch()">确定</a>
                 </div>
                 <div class="top_list right">
                     <ul>

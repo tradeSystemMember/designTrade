@@ -1,17 +1,17 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>下载素材新标签页积分不足余额足</title>
-<link rel="stylesheet" href="css/layout.css" />
-<link rel="stylesheet" href="css/down.css" />
-<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
-<script type="text/javascript" src="js/down.js"></script>
+<link rel="stylesheet" href="css/layout.css" th:href="@{/css/layout.css}" />
+<link rel="stylesheet" href="css/down.css" th:href="@{/css/down.css}"/>
+<script type="text/javascript" src="js/jquery-1.11.3.min.js" th:src="@{/js/jquery-1.11.3.min.js}"></script>
+<script type="text/javascript" src="js/down.js" th:src="@{/js/down.js}"></script>
 </head>
 
 <body>
 <div class="down_wrap" id="xiazai_id">
-	<h2>下载《手机UI界面展示模板》</h2>
+	<h2 >下载《[[${sucai.name}]]》模板</h2>
     <dl class="down_dl down_dl_3">
     	<dd class="down_dd_active">
         	<div class="down_dd_title">余额支付</div>
@@ -21,7 +21,7 @@
         <dd>
         	<div class="down_dd_title">积分支付</div>
             <div class="down_dd_price"><span>30</span>积分</div>
-            <div class="down_dd_dqprice">当前积分：<span>12</span>积分</div>
+            <div class="down_dd_dqprice">当前积分：<span>40</span>积分</div>
         </dd>
         <dd>
         	<div class="down_dd_title">在线支付</div>
@@ -31,10 +31,10 @@
     <div class="down_jieusn_wrap" id="userjiesuan_id">
     	<p>支付方式</p>
     	<dl class="jiesuan_dl">
-            <dd class="jisuan_active_dd"><img src="img/down_fukuan_img1.png" /></dd>
-            <dd><img src="img/down_fukuan_img2.png" /></dd>
-            <dd><img src="img/down_fukuan_img3.png" /></dd>
-            <dd><img src="img/down_fukuan_img4.png" /></dd>
+            <dd class="jisuan_active_dd"><img src="img/down_fukuan_img1.png" th:src="@{/img/down_fukuan_img1.png}"/></dd>
+            <dd><img src="img/down_fukuan_img2.png" th:src="@{/img/down_fukuan_img2.png}"/></dd>
+            <dd><img src="img/down_fukuan_img3.png" th:src="@{/img/down_fukuan_img3.png}"/></dd>
+            <dd><img src="img/down_fukuan_img4.png" th:src="@{/img/down_fukuan_img4.png}"/></dd>
         </dl>
     </div>
    	<div class="down_btn"><a href="down_zhifuwancheng_quane.html">下载</a></div>

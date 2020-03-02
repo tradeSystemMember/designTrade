@@ -28,8 +28,17 @@ public class ProductController {
     private SucaiService sucaiService;
 
     @RequestMapping("/detail")
-    public String detail(Integer id,HttpServletRequest request,Model model){
+    public String detail(Integer id,HttpServletRequest request,Model model,HttpSession session){
 //        String sid=request.getParameter("id");
+        String menuName=request.getParameter("menu");
+        String submenuName=request.getParameter("submenu");
+        if(menuName!=null&&!("".equals(menuName))){
+            model.addAttribute("menu",menuName);
+        }
+        if(submenuName!=null&&!("".equals(submenuName))){
+            model.addAttribute("submenu",submenuName);
+        }
+
         if(id!=null){
 //            Integer id=Integer.parseInt(sid);
             Sucai sucai=sucaiService.getOneById(id);
@@ -37,6 +46,15 @@ public class ProductController {
             List<String> taglist=sucaiService.getTags(id);
             model.addAttribute("sucai",sucai);
             model.addAttribute("taglist",taglist);
+
+            //已登录用户的收藏已否
+            User user= (User) session.getAttribute("user");
+            if(user!=null){
+                Integer uid=user.getId();
+                List<Integer> user_favlist =sucaiService.getUserFavList(uid);
+                model.addAttribute("favlist",user_favlist);
+            }
+
         }
 
         return "pro_detail";
@@ -74,20 +92,33 @@ public class ProductController {
         }
 
         String submenuname=request.getParameter("submenu");
+        System.out.println(submenuname);
         if(submenuname!=null&&!("".equals(submenuname))){
             list=sucaiService.getSubMenuPageList(submenuname,index,pageSize);
+            list.forEach(System.out::println);
             count=sucaiService.getSubMenuCount(submenuname);
+            System.out.println(count);
             model.addAttribute("submenu_active",submenuname);
         }
 
         //搜索结果
         String search=request.getParameter("search");
-        if(search!=null){
+        if(search!=null&&!("".equals(search))){
             list=sucaiService.getSearchPageList(search,index,pageSize);
+            System.out.println("search=======>"+search);
             count=sucaiService.getSearchCount(search);
         }
-
+        System.out.println(count);
         Integer pageNum=((count-1)/pageSize)+1;//总页数
+
+        //已登录用户的收藏已否
+        User user= (User) session.getAttribute("user");
+        if(user!=null){
+            Integer uid=user.getId();
+            List<Integer> user_favlist =sucaiService.getUserFavList(uid);
+            model.addAttribute("favlist",user_favlist);
+        }
+
 
         model.addAttribute("menus",menus);
         model.addAttribute("submenus",submenu);
@@ -97,6 +128,12 @@ public class ProductController {
         model.addAttribute("curr",current);
         model.addAttribute("total",count);
         model.addAttribute("search",search);
+
+        System.out.println("pageNum"+pageNum);
+        System.out.println("pageSize"+pageSize);
+        System.out.println("current"+current);
+        System.out.println("total"+count);
+//        System.out.println("current"+current);
 
         //尝试进行点赞操作，暂时写死用户
 //        if(session.getAttribute("user")==null)
@@ -122,13 +159,31 @@ public class ProductController {
         return taglist;
     }
 
-    @RequestMapping("/addfav")//处理点赞
+    @RequestMapping("/fav/addfav")//处理点赞
     @ResponseBody
-    public String addfav(HttpSession session, HttpServletRequest request) throws IOException {
+    public Sucai addfav(HttpSession session, HttpServletRequest request) throws IOException {
         System.out.println("进入了controller");
-        Integer id=Integer.parseInt(request.getParameter("sid"));
-        String str="sid="+id+"user"+ session.getAttribute("user");
-        return str;
+        Integer sid=Integer.parseInt(request.getParameter("sid"));
+        User user= (User) session.getAttribute("user");
+        //用户未登录
+        if(user==null){
+            return null;
+        }
+        else{
+            Integer uid=user.getId();
+            String favflag=request.getParameter("fav");
+            if("true".equals(favflag)){
+                //要取消点赞
+                sucaiService.updateDelFav(sid);
+                sucaiService.deleteOneFav(sid,uid);
+            }else{
+                //进行点赞
+                sucaiService.updateFav(sid);
+                sucaiService.insertOneFav(sid,uid);
+            }
+            Sucai sucai=sucaiService.getOneById(sid);
+            return sucai;
+        }
     }
 
 //    @RequestMapping("/sublist")

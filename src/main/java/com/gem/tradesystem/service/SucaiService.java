@@ -29,6 +29,11 @@ public interface SucaiService {
     List<Sucai> getSearchPageList(String search,Integer page,Integer size);//分页获取搜索结果的素材
 
 //    Sucai getOneSu(Integer id);
-    int updateFav(Integer id);//根据sucai的id更新sucai表中的点赞数
-    int insertOneFav(Integer sucaiid,Integer userid);
+    //点赞相关操作
+    int updateFav(Integer id);//根据sucai的id更新sucai表中的点赞数 点赞
+    int insertOneFav(Integer sucaiid,Integer userid);//在fav表中插入一条点赞记录
+    int updateDelFav(Integer id);//根据sucai的id更新sucai表中的点赞数 取消赞
+    int deleteOneFav(Integer sucaiid,Integer userid);//在fav表中删除一条点赞记录
+    List<Integer> getUserFavList(Integer userid);//获取登录用户已点赞的素材id
+
 }

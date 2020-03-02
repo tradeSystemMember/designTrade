@@ -1133,6 +1133,12 @@ a:link{
 .zcq_c3 .sc_a:hover{
 	background:url(../img/sc_icon_hover.gif) center left no-repeat;
 }
+/*点赞后的样式*/
+.zcq_c3 .favored{
+	background:url(../img/sc_icon_hover.gif) center left no-repeat;
+	color:#e83a17;
+}
+
 .zcq_c3 .xz_a{
 	border-right:0;
 	background:url(../img/xz_icon.gif) center left no-repeat;
@@ -1264,6 +1270,12 @@ a:link{
 .detail_caozuo_wrap .caozuo_sc:hover{
 	background:url(../img/sc_icon_hover.gif) center left no-repeat;
 }
+/*点赞后的样式*/
+.detail_caozuo_wrap .favored{
+	background:url(../img/sc_icon_hover.gif) center left no-repeat;
+	color:#e83a17;
+}
+
 .detail_caozuo_wrap .caozuo_xz{
 	background:url(../img/xz_icon.gif) center left no-repeat;
 	padding-left:18px;
@@ -1996,6 +2008,10 @@ a:link{
 	background:url(../img/pro_detail_scimg.gif) no-repeat;
 }
 .pro_detail_btn a.pro_detail_sc:hover{
+	background:url(../img/pro_detail_scimg_hover.gif) no-repeat;
+}
+/*新增点击收藏后的样式*/
+.pro_detail_btn a.pro_detail_sc.favored{
 	background:url(../img/pro_detail_scimg_hover.gif) no-repeat;
 }
 .pro_detail_caozuo{
@@ -3171,7 +3187,52 @@ a:link{
 }
 /*首页新增签到样式end*/
 
+/*新增图片放大镜模块样式*/
+/*.fangda_right{*/
+/*	float:left;*/
+/*	!*position: relative;*!*/
+/*	width:350px;*/
+/*	height:350px;*/
+/*	overflow:hidden;!*超出部分隐藏*!*/
+/*	padding:0px;*/
+/*	display:none;!*默认先不显示*!*/
+/*}*/
+#float_box {
+	/*width: 200px;*/
+	/*height: 200px;*/
+	background-color: green;
+	filter: alpha(opacity=30);/*针对ie对于透明度的处理*/
+	opacity: 0.4;
+	position: absolute;
+	display: none;
+	cursor: move;
+}
+/*#pic_wrap {*/
+/*	position: relative;*/
+/*	float: left;*/
+/*}*/
 
+#big_img {
+	/*background-image: url(images/Layer14.png);*/
+	/*width: 200%;*/
+	/*height: 200%;*/
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: absolute;
+}
+#show {
+	/*float: left;*/
+	width: 450px;
+	height: 450px;
+	background-color: white;
+	opacity: 1;
+	filter: alpha(opacity=100);
+	overflow: hidden;
+	display: none;
+	position: absolute;
+	top: 290px;
+	left: 54%;
+}
 
 
 

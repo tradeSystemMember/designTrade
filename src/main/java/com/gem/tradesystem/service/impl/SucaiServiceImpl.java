@@ -134,6 +134,24 @@ public class SucaiServiceImpl implements SucaiService {
         return i;
     }
 
+    @Override
+    public int updateDelFav(Integer id) {
+        int i=sucaiMapper.updateDelFav(id);
+        return i;
+    }
+
+    @Override
+    public int deleteOneFav(Integer sucaiid, Integer userid) {
+        int i=sucaiMapper.deleteOneFav(sucaiid,userid);
+        return i;
+    }
+
+    @Override
+    public List<Integer> getUserFavList(Integer userid) {
+        List<Integer> sucaiList=sucaiMapper.getUserFavList(userid);
+        return sucaiList;
+    }
+
 //    @Override
 //    public Sucai getOneSu(Integer id) {
 //        Sucai su=sucaiMapper.getOneSu(id);

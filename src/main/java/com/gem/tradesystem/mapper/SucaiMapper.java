@@ -10,7 +10,16 @@ import java.util.List;
 @Mapper
 @Repository
 public interface SucaiMapper {
-    @Update("update sucai set favnum=favnum+1 WHERE id=#{id}")//根据sucai的id更新sucai表中的点赞数
+    @Select("SELECT sucaiid FROM fav WHERE userid=#{userid}")//获取登录用户已点赞的素材id
+    List<Integer> getUserFavList(Integer userid);
+
+    @Delete("delete from fav where userid=#{userid} and sucaiid=#{sucaiid}")//在fav表中删除一条点赞记录
+    int deleteOneFav(@Param("sucaiid") Integer sucaiid, @Param("userid")Integer userid);
+
+    @Update("update sucai set favnum=favnum-1 WHERE id=#{id}")//根据sucai的id更新sucai表中的点赞数 取消赞
+    int updateDelFav(Integer id);
+
+    @Update("update sucai set favnum=favnum+1 WHERE id=#{id}")//根据sucai的id更新sucai表中的点赞数 点赞
     int updateFav(Integer id);
 
     @Insert("INSERT into fav(sucaiid,userid) values(#{sucaiid},#{userid})")//在fav表中插入一条点赞记录
