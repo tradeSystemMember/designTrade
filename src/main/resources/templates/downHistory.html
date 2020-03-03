@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>下载记录</title>
+    <link rel="stylesheet" href="/css/layout.css"/>
+    <link rel="stylesheet" href="/css/user.css"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/assets/css/layui.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/assets/css/view.css}"/>
+    <script type="text/javascript" src="/js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="/js/bannerslider.js"></script>
+    <script type="text/javascript" src="/js/layout.js"></script>
+    <script type="text/javascript" th:src="@{/assets/layui.js}"></script>
+    <script th:src="@{https://cdn.staticfile.org/vue/2.2.2/vue.min.js}"></script>
+</head>
+
+<body>
+<div th:insert="~{top :: nav}"></div>
+<!--1200结构-->
+<div class="pro_wrap user_pro_wrap  auto">
+    <h2 class="weizhi_title">位置：<a href="#">首页</a> > 下载记录</h2>
+</div>
+<!--1200结构end-->
+
+<div class="user_join_designer">
+    <a href="#"></a>
+</div>
+
+<div class="user_center auto">
+    <div class="user_navside left">
+        <ul class="user_navside_ul">
+            <li><a th:href="@{/center/toCenter}"><span class="user_icon1">用户中心</span></a></li>
+            <li><a th:href="@{/publish/toPublish}"><span class="user_icon2">发布</span></a></li>
+            <li><a th:href="@{/collect/toCollect}"><span class="user_icon3">我的收藏</span></a></li>
+            <li><a th:href="@{/cart/toCart}"><span class="user_icon4">我的购物车</span></a></li>
+            <li class="user_active_li"><a th:href="@{/downHistory/toDownHistory}"><span
+                    class="user_icon6">下载记录</span></a></li>
+            <li><a th:href="@{/buyHistory/toBuyHistory}">购买记录</span></a></li>
+            <li><a th:href="@{/wallet/toWallet}">我的钱包</span></a></li>
+            <!--<li><a href="#"><span class="user_icon10">消息中心</span></a></li>-->
+            <li><a th:href="@{/userSetting/toUserSetting}"><span class="user_icon11">个人设置</span></a></li>
+        </ul>
+    </div>
+    <div class="user_right user_goumai_right right" id="downContainer">
+
+        <div class="user_shoucang user_goumaijilu">我的下载记录：<span>共“{{totalCount}}”个素材</span></div>
+        <!--收藏产品列表结构-->
+        <div class="main_content user_pro_content">
+            <div class="zcq_wrap">
+                <div class="zcq_div user_sc_div left" v-for="item in data">
+                    <div class="zcq_c1">
+                        <div class="zc_list">
+                            <img src="/img/zcq_img1.gif"/>
+                            <!--鼠标滑过图片显示隐藏层结构-->
+                            <div class="detail_hidden">
+                                <a href="#"><img src="/img/zcq_img1_big.gif"/></a>
+                                <div class="detail_hidden_wrap">
+                                    <h2>手机移动H5页面模板<span>¥398</span></h2>
+                                    <div class="detail_user_wrap">
+                                        <div class="detail_list_img"><a href="#"><img src="/img/detail_hidden_img.jpg"/></a>
+                                        </div>
+                                        <div class="detail_list_name">番茄设计团队</div>
+                                    </div>
+                                    <div class="detail_caozuo_wrap">
+                                        <a class="caozuo_sc" href="#">收藏（2333）</a><a class="caozuo_xz"
+                                                                                     href="#">下载（2333）</a>
+                                    </div>
+                                    <div class="detail_biaoqian_wrap">
+                                        <ul>
+                                            <li>标签</li>
+                                            <li>标签</li>
+                                            <li>标签</li>
+                                            <li>标签</li>
+                                        </ul>
+                                    </div>
+                                    <div class="detail_btn_wrap">
+                                        <a class="detail_xz" href="#">立即下载</a><a class="detail_jrgwc" href="#"><img
+                                            src="img/hidden_gwc_white.png"/></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--鼠标滑过图片显示隐藏层结构end-->
+                        </div>
+                    </div>
+                    <h2 class="zcq_c2">{{item.name}}</h2>
+                    <div class="zcq_c3">
+                        <a class="sc_a" href="#">收藏（2333）</a><a class="xz_a" href="#">下载（2333）</a>
+                    </div>
+                </div>
+
+
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div id="layPagination_down"></div>
+        <!--收藏产品列表结构end-->
+    </div>
+    <div class="clear"></div>
+    <script>
+        var vue = new Vue({
+            el: "#downContainer",
+            data: {
+                data: null,
+                totalCount:0
+            }
+        });
+        var pageIndex = 1;//默认第一页
+        var PageSize = 3;//每页显示记录数
+        var totalCount = 0;//总记录数
+        pagination(pageIndex,PageSize);
+        function pagination(pageIndex,pageSize){
+            var param ={
+                pageIndex:pageIndex,
+                pageSize:pageSize,
+            };
+            $.ajax({
+                type:"post",
+                url:"/downHistory/getDownHistoryData",
+                data:param,
+                async:false,
+                success:function (data) {
+                    vue.data = data.data;
+                    vue.totalCount = data.count;
+                    totalCount = data.count;
+                }
+            })
+        }
+        layui.use('laypage', function(){
+            var laypage = layui.laypage;
+
+            //执行一个laypage实例
+            laypage.render({
+                elem: 'layPagination_down'
+                ,count: totalCount //数据总数，从服务端得到
+                ,limit:3
+                ,jump:function(obj,first){
+                    if (!first){
+                        pagination(obj.curr, obj.limit);
+                    }
+                }
+            });
+        });
+        // }))
+
+    </script>
+</div>
+<div th:insert="~{bottom :: nav}"></div>
+</body>
+</html>

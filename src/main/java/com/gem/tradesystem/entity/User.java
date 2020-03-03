@@ -1,11 +1,14 @@
 package com.gem.tradesystem.entity;
 
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import java.io.Serializable;
 import java.util.Date;
 
 @Data
+@TableName("user")
 public class User implements Serializable {
     private Integer id;
     private String username;

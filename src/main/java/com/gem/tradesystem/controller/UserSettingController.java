@@ -13,16 +13,15 @@ import org.springframework.web.multipart.MultipartFile;
 
 /*用户设置*/
 @Controller
-@RequestMapping("/userSet")
+@RequestMapping("/userSetting")
 public class UserSettingController {
     @Autowired
     private UserSettingService userSettingService;
     @Autowired
     UploadProperties uploadProperties;
-    @RequestMapping("/toUserCenter")
+    @RequestMapping("/toUserSetting")
     public String toUserSetting(){
-        return "user_setting";
-
+        return "userSetting";
     }
 
     //用户设置

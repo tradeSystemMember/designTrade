@@ -1,13 +1,15 @@
 package com.gem.tradesystem.entity;
 
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import org.apache.ibatis.type.Alias;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.text.Format;
 import java.util.Date;
 @Data
-@Alias("Sucai")
+@TableName("sucai")
 public class Sucai {
     private Integer id;
     private String num;

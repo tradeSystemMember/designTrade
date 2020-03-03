@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -16,9 +17,12 @@ public class IndexController {
     @Autowired
     private IndexService indexService;
 
-    @RequestMapping("/toIndex")
-    public String toIndex(){
-        return "index";
+
+    @RequestMapping("/loginOut")
+    @ResponseBody
+    public String  toIndex(HttpServletRequest request){
+        request.getSession().removeAttribute("user");
+        return "success";
     }
     //登录
     @RequestMapping(value = "/login",method = RequestMethod.POST)
@@ -30,12 +34,7 @@ public class IndexController {
         }
         return user;
     }
-    //注销
-    @RequestMapping(value = "/loginOut")
-    public String  userCenter(HttpServletRequest request){
-        request.getSession().removeAttribute("user");
-        return "index";
-    }
+
     //跳转到用户中心
     @RequestMapping(value = "/center")
     public String userCenter(){

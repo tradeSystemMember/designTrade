@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>用户中心-设计师主页-基本资料</title>
+		<link rel="stylesheet" href="/css/layout.css" />
+		<link rel="stylesheet" href="/css/user.css" />
+		<link rel="stylesheet" type="text/css" th:href="@{/assets/css/layui.css}"/>
+		<link rel="stylesheet" type="text/css" th:href="@{/assets/css/view.css}"/>
+		<script type="text/javascript" src="/js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="/js/bannerslider.js"></script>
+		<script type="text/javascript" src="/js/layout.js"></script>
+		<script type="text/javascript" th:src="@{/assets/layui.js}"></script>
+		<script th:src="@{https://cdn.staticfile.org/vue/2.2.2/vue.min.js}"></script>
+	</head>
+
+	<body>
+	<div th:insert="~{top :: nav}"></div>
+
+		<!--1200结构-->
+		<div class="pro_wrap user_pro_wrap  auto">
+			<h2 class="weizhi_title">位置：<a href="#">首页</a> > 用户中心</h2>
+		</div>
+		<!--1200结构end-->
+
+		<div class="user_join_designer">
+			<a href="#"></a>
+		</div>
+
+		<div class="user_center auto">
+			<div class="user_navside left">
+				<ul class="user_navside_ul">
+					<li><a th:href="@{/center/toCenter}"><span class="user_icon1">用户中心</span></a></li>
+					<li><a th:href="@{/publish/toPublish}"><span class="user_icon2">发布</span></a></li>
+					<li><a th:href="@{/collect/toCollect}"><span class="user_icon3">我的收藏</span></a></li>
+					<li><a th:href="@{/cart/toCart}"><span class="user_icon4">我的购物车</span></a></li>
+					<li><a th:href="@{/downHistory/toDownHistory}"><span class="user_icon6">下载记录</span></a></li>
+					<li><a th:href="@{/buyHistory/toBuyHistory}">购买记录</span></a></li>
+					<li><a th:href="@{/wallet/toWallet}">我的钱包</span></a></li>
+					<!--<li><a href="#"><span class="user_icon10">消息中心</span></a></li>-->
+					<li class="user_active_li"><a th:href="@{/userSetting/toUserSetting}"><span class="user_icon11">个人设置</span></a></li>
+				</ul>
+			</div>
+			<div class="user_designer_ziliao_wrap">
+				<div class="user_designer_ziliao_left left">
+					<form th:action="@{/userSetting/setting/(id=${session.user.id})}" method="post" enctype ="multipart/form-data">
+						<h2>您填写的信息有利于平台和其它用户识别您</h2>
+						<table cellpadding="0" cellspacing="0" class="user_designer_ziliao_table">
+							<tr>
+								<td class="user_designer_ziliao_td">用&nbsp;户&nbsp;名：</td>
+								<td><input type="text" class="user_designer_ziliao_input" th:placeholder="${session.user.username}" name="username" /></td>
+							</tr>
+							<tr>
+								<td class="user_designer_ziliao_td">修改头像：</td>
+								<td><input type="hidden" id="img_url">
+									<input type="file" onchange="showImg()" id="img_file" name="avatarPic"><img src="" alt="" id="img_id" style="width: 100px"></td>
+							</tr>
+							<tr>
+								<td class="user_designer_ziliao_td">会员等级：</td>
+								<td>LV2</td>
+							</tr>
+							<tr>
+								<td class="user_designer_ziliao_td">性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：</td>
+								<td>
+									<ul class="user_designer_ziliao_ul">
+										<li>
+											<input type="radio" name="sex" value="男">男
+										</li>
+										<li>
+											<input type="radio" name="sex" value="女">女
+										</li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<td class="user_designer_ziliao_td">注册时间：</td>
+								<td><span th:text="${#dates.format(session.user.regTime, 'yyyy-MM-dd HH:mm')}"></span></td>
+							</tr>
+							<tr>
+								<td class="user_designer_ziliao_td">当前积分：</td>
+								<td><span th:text="${session.user.account}"></span></td>
+							</tr>
+							<tr>
+								<td class="user_designer_ziliao_td">当前余额：</td>
+								<td>128585</td>
+							</tr>
+							<tr>
+								<td class="user_designer_ziliao_td">手机号码：</td>
+								<td><span th:text="${session.user.telephone}+'(已绑定)'"></span></td>
+							</tr>
+							<tr>
+								<td class="user_designer_ziliao_td"></td>
+								<td class="user_designer_ziliao_shejiao_td">
+									<input type="submit" class="user_designer_ziliao_btn" value="保存" />
+								</td>
+							</tr>
+
+						</table>
+					</form>
+				</div>
+
+				<div class="clear"></div>
+			</div>
+				<!--基本资料结构end-->
+
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	<div th:insert="~{bottom :: nav}"></div>
+	</body>
+</html>

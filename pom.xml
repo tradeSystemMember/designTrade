@@ -16,6 +16,7 @@
 
     <properties>
         <java.version>11</java.version>
+        <mybatis.plus.version>3.3.1</mybatis.plus.version>
     </properties>
 
     <dependencies>
@@ -58,6 +59,12 @@
 <!--                    <artifactId>junit-vintage-engine</artifactId>-->
 <!--                </exclusion>-->
 <!--            </exclusions>-->
+        </dependency>
+        <!-- mybatis-plus依赖 -->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>${mybatis.plus.version}</version>
         </dependency>
 
         <!--七牛配置依赖-->

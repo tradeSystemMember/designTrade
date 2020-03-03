@@ -2,37 +2,86 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="84c9313e-5227-49e3-97b2-f311ba399f89" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_3_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_annotation_3_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_boot_starter_3_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_core_3_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_extension_3_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_jsqlparser_jsqlparser_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_vintage_junit_vintage_engine_5_5_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gem/tradesystem/controller/CollectController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gem/tradesystem/controller/ShoppingCartController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gem/tradesystem/mapper/CollectMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gem/tradesystem/mapper/ShoppingCartMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gem/tradesystem/mapper/UserCenterMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gem/tradesystem/service/CollectService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gem/tradesystem/service/ShoppingCartService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gem/tradesystem/service/UserCenterService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gem/tradesystem/service/impl/CollectServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gem/tradesystem/service/impl/ShoppingCartServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gem/tradesystem/service/impl/UserCenterServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/bottom.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/collect.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/shoppingCart.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/userSetting.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/gem/tradesystem/controller/CollectController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/gem/tradesystem/controller/DownloadController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/gem/tradesystem/controller/ShoppingCartController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/gem/tradesystem/mapper/CollectMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/gem/tradesystem/mapper/ShoppingCartMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/gem/tradesystem/mapper/UserCenterMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/gem/tradesystem/service/CollectService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/gem/tradesystem/service/ShoppingCartService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/gem/tradesystem/service/UserCenterService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/gem/tradesystem/service/impl/CollectServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/gem/tradesystem/service/impl/ShoppingCartServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/gem/tradesystem/service/impl/UserCenterServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/bottom.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/collect.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/shoppingCart.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/userSetting.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/designTrade.iml" beforeDir="false" afterPath="$PROJECT_DIR$/designTrade.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gem/tradesystem/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gem/tradesystem/controller/IndexController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gem/tradesystem/controller/UserCenterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gem/tradesystem/controller/UserCenterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gem/tradesystem/controller/UserSettingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gem/tradesystem/controller/UserSettingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gem/tradesystem/entity/Sucai.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gem/tradesystem/entity/Sucai.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gem/tradesystem/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gem/tradesystem/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/SucaiMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/layout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/down_jifenbuzu_login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/down_jifenbuzu_yuezu.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/down_zhifuwancheng_quane.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index_login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/loginJump.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/loginJump.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/top.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/top.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user_center.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user_center.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user_fabu_bjfb.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user_fabu_shehezhong.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user_fabu_weitongguo.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user_fabu_yifabu.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user_goumaijilu.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user_gouwuche.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user_myshoucang.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user_setting.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user_wanchengdingdan.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user_weiwanchengdingdan.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user_xiazaijilu.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user_zhifu_jifenchongzhi.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user_zhifu_yuechongzhi.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user_zhifu_yueduihuan.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gem/tradesystem/controller/IndexController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gem/tradesystem/controller/IndexController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gem/tradesystem/controller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gem/tradesystem/controller/ProductController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gem/tradesystem/controller/UserCenterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gem/tradesystem/controller/UserCenterController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gem/tradesystem/controller/UserSettingController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gem/tradesystem/controller/UserSettingController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gem/tradesystem/entity/Sucai.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gem/tradesystem/entity/Sucai.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gem/tradesystem/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gem/tradesystem/entity/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gem/tradesystem/mapper/SucaiMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gem/tradesystem/mapper/SucaiMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gem/tradesystem/service/SucaiService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gem/tradesystem/service/SucaiService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gem/tradesystem/service/impl/SucaiServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gem/tradesystem/service/impl/SucaiServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/layout.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/layout.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/layout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/down_jifenbuzu_login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/down_jifenbuzu_yuezu.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/down_zhifuwancheng_quane.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/index_login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/loginJump.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/loginJump.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/pro_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/pro_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/pro_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/pro_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/top.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/top.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/user_center.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/user_center.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/user_fabu_bjfb.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/user_fabu_shehezhong.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/user_fabu_weitongguo.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/user_fabu_yifabu.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/user_goumaijilu.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/user_gouwuche.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/user_myshoucang.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/user_setting.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/user_wanchengdingdan.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/user_weiwanchengdingdan.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/user_xiazaijilu.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/user_zhifu_jifenchongzhi.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/user_zhifu_yuechongzhi.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/user_zhifu_yueduihuan.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +103,9 @@
     <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/gem/tradesystem/service/impl/ShoppingCartServiceImpl.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/gem/tradesystem/service/impl/UserCenterServiceImpl.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/gem/tradesystem/service/impl/BuyHistoryServiceImpl.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/gem/tradesystem/service/impl/RegServiceImpl.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/gem/tradesystem/controller/RegController.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/gem/tradesystem/service/impl/IndexServiceImpl.java" root0="SKIP_INSPECTION" />
@@ -89,7 +141,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/gem/tradesystem/config" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -105,15 +157,20 @@
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.gem.tradesystem" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.gem.tradesystem.mapper" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Projec\designTrade\src\main\java\com\gem\tradesystem\config" />
       <recent name="E:\Projec\designTrade\src\main\resources\templates" />
+      <recent name="E:\Projec\designTrade\src\main\java\com\gem\tradesystem\config" />
       <recent name="E:\Project\designTrade\src\main\resources" />
       <recent name="E:\Project\designTrade\src\main\resources\templates" />
       <recent name="E:\Project\designTrade\src\main\resources\static" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.gem.tradesystem.mapper" />
+      <recent name="com.gem.tradesystem.controller" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.gem.tradesystem.service" />
+      <recent name="com.gem.tradesystem.mapper" />
     </key>
   </component>
   <component name="RunManager">
@@ -159,7 +216,17 @@
       <workItem from="1582331816415" duration="17102000" />
       <workItem from="1582502734767" duration="31620000" />
       <workItem from="1582590509526" duration="16158000" />
-      <workItem from="1582676880410" duration="8714000" />
+      <workItem from="1582676880410" duration="17643000" />
+      <workItem from="1582763206387" duration="9355000" />
+      <workItem from="1582849734727" duration="6810000" />
+      <workItem from="1582866336658" duration="6860000" />
+      <workItem from="1582938008247" duration="589000" />
+      <workItem from="1582953992603" duration="8508000" />
+      <workItem from="1583108773257" duration="146000" />
+      <workItem from="1583109135673" duration="25418000" />
+      <workItem from="1583145677689" duration="632000" />
+      <workItem from="1583146700785" duration="4493000" />
+      <workItem from="1583195247077" duration="6886000" />
     </task>
     <task id="LOCAL-00001" summary="xzz-2-19:第一次提交">
       <created>1582074635277</created>
@@ -252,11 +319,54 @@
       <option name="project" value="LOCAL" />
       <updated>1582680863890</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="xzz-2-26:第一次提交">
+      <created>1582686584297</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1582686584297</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="1">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="OPEN_TABS">
+      <set>
+        <option value="1" />
+      </set>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="xzz-2-19:第一次提交" />
@@ -264,21 +374,22 @@
     <MESSAGE value="xzz-2-19:第三次提交" />
     <MESSAGE value="xzz-2-20:第一次提交" />
     <MESSAGE value="xzz-2-25:第一次提交" />
-    <option name="LAST_COMMIT_MESSAGE" value="xzz-2-25:第一次提交" />
+    <MESSAGE value="xzz-2-26:第一次提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="xzz-2-26:第一次提交" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Inspections" timestamp="1582679594978">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="178" key="#Inspections/0.0.1920.1040@0.0.1920.1040" timestamp="1582679594978" />
-    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1582609230651">
+    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1583203729281">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1582609230651" />
-    <state x="690" y="295" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1582609198687">
+    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1583203729281" />
+    <state x="690" y="295" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1583197942928">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="295" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582609198687" />
+    <state x="690" y="295" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583197942928" />
     <state x="765" y="445" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1582077981236">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -287,54 +398,54 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="739" y="399" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1920.1040@0.0.1920.1040" timestamp="1582077986429" />
-    <state x="1001" y="383" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1582685903850">
+    <state x="1001" y="383" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1583150015531">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1001" y="383" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582685903850" />
-    <state x="516" y="98" key="CommitChangelistDialog2" timestamp="1582680872290">
+    <state x="1001" y="383" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583150015531" />
+    <state x="516" y="98" key="CommitChangelistDialog2" timestamp="1583216029615">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="516" y="98" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1582680872290" />
-    <state x="368" y="183" key="DiffContextDialog" timestamp="1582078846438">
+    <state x="516" y="98" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1583216029615" />
+    <state x="136" y="141" width="1536" height="855" key="DiffContextDialog" timestamp="1582689034553">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="368" y="183" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582078846438" />
-    <state x="915" y="327" key="FileChooserDialogImpl" timestamp="1582616404071">
+    <state x="136" y="141" width="1536" height="855" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582689034553" />
+    <state x="915" y="327" key="FileChooserDialogImpl" timestamp="1582963073819">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="915" y="327" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1582616404070" />
-    <state width="1877" height="136" key="GridCell.Tab.0.bottom" timestamp="1582686071357">
+    <state x="915" y="327" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1582963073819" />
+    <state width="1877" height="153" key="GridCell.Tab.0.bottom" timestamp="1583215236646">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="136" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1582686071357" />
-    <state width="1877" height="136" key="GridCell.Tab.0.center" timestamp="1582686071357">
+    <state width="1877" height="153" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1583215236646" />
+    <state width="1877" height="153" key="GridCell.Tab.0.center" timestamp="1583215236646">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="136" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1582686071357" />
-    <state width="1877" height="136" key="GridCell.Tab.0.left" timestamp="1582686071356">
+    <state width="1877" height="153" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1583215236646" />
+    <state width="1877" height="153" key="GridCell.Tab.0.left" timestamp="1583215236646">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="136" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1582686071356" />
-    <state width="1877" height="136" key="GridCell.Tab.0.right" timestamp="1582686071357">
+    <state width="1877" height="153" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1583215236646" />
+    <state width="1877" height="153" key="GridCell.Tab.0.right" timestamp="1583215236646">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="136" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1582686071357" />
-    <state width="1877" height="136" key="GridCell.Tab.1.bottom" timestamp="1582686071357">
+    <state width="1877" height="153" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1583215236646" />
+    <state width="1877" height="153" key="GridCell.Tab.1.bottom" timestamp="1583215236647">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="136" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1582686071357" />
-    <state width="1877" height="136" key="GridCell.Tab.1.center" timestamp="1582686071357">
+    <state width="1877" height="153" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1583215236647" />
+    <state width="1877" height="153" key="GridCell.Tab.1.center" timestamp="1583215236647">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="136" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1582686071357" />
-    <state width="1877" height="136" key="GridCell.Tab.1.left" timestamp="1582686071357">
+    <state width="1877" height="153" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1583215236647" />
+    <state width="1877" height="153" key="GridCell.Tab.1.left" timestamp="1583215236646">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="136" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1582686071357" />
-    <state width="1877" height="136" key="GridCell.Tab.1.right" timestamp="1582686071357">
+    <state width="1877" height="153" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1583215236646" />
+    <state width="1877" height="153" key="GridCell.Tab.1.right" timestamp="1583215236647">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="136" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1582686071357" />
+    <state width="1877" height="153" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1583215236647" />
     <state width="1357" height="295" key="GridCell.Tab.2.bottom" timestamp="1582549262467">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -359,29 +470,33 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="752" y="189" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1582354272877" />
-    <state x="404" y="444" key="Vcs.Push.Dialog.v2" timestamp="1582680890718">
+    <state x="404" y="444" key="Vcs.Push.Dialog.v2" timestamp="1582686586700">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="404" y="444" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1582680890718" />
-    <state x="752" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1582078776559">
+    <state x="404" y="444" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1582686586700" />
+    <state x="752" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1583113125505">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="752" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1582078776559" />
+    <state x="752" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1583113125505" />
     <state x="636" y="253" width="647" height="534" key="find.popup" timestamp="1582503365596">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="636" y="253" width="647" height="534" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1582503365596" />
-    <state x="647" y="311" key="git4idea.merge.GitPullDialog" timestamp="1582681141849">
+    <state x="647" y="311" key="git4idea.merge.GitPullDialog" timestamp="1582688992141">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="647" y="311" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582681141849" />
+    <state x="647" y="311" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582688992141" />
+    <state x="702" y="147" key="refactoring.ChangeSignatureDialog" timestamp="1582963251107">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="702" y="147" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582963251107" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1582184566013">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1582184566013" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1582685503432">
+    <state x="1018" y="187" width="672" height="678" key="search.everywhere.popup" timestamp="1583214157754">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1582685503432" />
+    <state x="1018" y="187" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1583214157754" />
   </component>
 </project>

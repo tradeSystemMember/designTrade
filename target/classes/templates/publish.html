@@ -1,0 +1,549 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>用户中心-发布-编辑发布</title>
+    <link rel="stylesheet" href="/css/layout.css" />
+    <link rel="stylesheet" href="/css/user.css" />
+    <link rel="stylesheet" type="text/css" th:href="@{/assets/css/layui.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/assets/css/view.css}"/>
+    <script type="text/javascript" src="/js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="/js/bannerslider.js"></script>
+    <script type="text/javascript" src="/js/layout.js"></script>
+    <script type="text/javascript" th:src="@{/assets/layui.js}"></script>
+    <script th:src="@{https://cdn.staticfile.org/vue/2.2.2/vue.min.js}"></script>
+</head>
+
+<body>
+<div th:insert="~{top :: nav}"></div>
+
+<!--1200结构-->
+<div class="pro_wrap user_pro_wrap  auto">
+	<h2 class="weizhi_title">位置：<a href="#">首页</a> > 发布 > 上传</h2>      
+</div>
+<!--1200结构end-->
+
+<div class="user_join_designer">
+	<a href="#"></a>
+</div>
+
+<div class="user_center auto">
+	<div class="user_navside left">
+        <ul class="user_navside_ul">
+            <li><a th:href="@{/center/toCenter}"><span class="user_icon1">用户中心</span></a></li>
+            <li class="user_active_li"><a th:href="@{/publish/toPublish}"><span class="user_icon2">发布</span></a></li>
+            <li><a th:href="@{/collect/toCollect}"><span class="user_icon3">我的收藏</span></a></li>
+            <li><a th:href="@{/cart/toCart}"><span class="user_icon4">我的购物车</span></a></li>
+            <li><a th:href="@{/downHistory/toDownHistory}"><span class="user_icon6">下载记录</span></a></li>
+            <li><a th:href="@{/buyHistory/toBuyHistory}">购买记录</span></a></li>
+            <li><a th:href="@{/wallet/toWallet}">我的钱包</span></a></li>
+            <!--<li><a href="#"><span class="user_icon10">消息中心</span></a></li>-->
+            <li><a th:href="@{/userSetting/toUserSetting}"><span class="user_icon11">个人设置</span></a></li>
+        </ul>
+    </div>
+    <div class="user_fabu_right right">
+    	
+        <div class="mytitle_twozero_wrap">
+        	<div class="mytitle_twozero_content">
+                <div class="mytitle_twozero">
+                    <ul class="mytitle_twozero_ul">
+												<li class="mytitle_twozero_liactive"><a href="user_fabu_bjfb.html">上传</a></li>
+												<li><a href="user_fabu_shehezhong.html">审核中（05）</a></li>
+                        <li><a href="user_fabu_weitongguo.html">未通过（03）</a></li>
+                        <li><a href="user_fabu_yifabu.html">已发布（25）</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="user_fabu_content user_fabu_twozero">
+        	<div class="fabu_twozero_warp">
+            	<div class="fabu_twozero_img left"><img src="img/fabu_twozero_img.gif" width="150" height="114" /></div>
+               	<div class="fabu_twozero_title left">
+                	<div class="fabu_twozero_c">烟花鞭炮爆竹.png</div>
+                    <div class="fabu_twozero_c">文件大小：13M-100%-编辑中...</div>
+                    <div class="fabu_twozero_jindu_wrap">
+                    	<div class="fabu_twozero_jd" style="width:75%;"></div>
+                    </div>
+                </div>
+                <!--<div class="fabu_twozero_cha">
+                	<a class="fabu_twozero_guanbi" href="#"></a>
+                </div>-->
+            </div>
+            <div class="fabu_twozero_bitian margin916">必填</div>
+            
+            <form method="post" action="">
+            <!--发布内容结构-->
+            <div class="fabu_twozero_kuang">
+            	<table class="fabu_twozero_table1" cellpadding="0" cellspacing="0">
+                	<tr>
+                    	<td class="fabu_twozero_td1">素材类型：</td>
+                        <td class="fabu_twozero_td2">
+                        	<dl class="fabu_twozero_dl fabu_twozero_qiehuan_dl">
+                            	<dd class="fabu_twozero_ddactive">分享资源</dd>
+                                <dd>原创</dd>
+                            </dl>
+                        </td>
+                        <td rowspan="7" style="vertical-align:top; padding-top:10px;">
+                        	<div class="fabu_twozero_slt">
+                            	<img class="fabu_twozero_sltimg" src="img/fabu_twozero_img.gif" width="150" height="114" />
+                                <div class="fabu_twozero_sltwrap" style="display:none;">
+                                	<div class="fabu_twozero_sltzhezhao">
+                                    	<a class="b" href="#">修改缩略图</a>
+                                        <input type="file" name="image" class="filehidden" value="" />
+                                    </div> 
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                    	<td class="fabu_twozero_td1" style="letter-spacing:1px;">分&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;类：</td>
+                        <td class="fabu_twozero_td2">
+                        	<div class="fabu_twozero_fenlei1 left" onclick="javascript:fabu_twozeroshowDiv(3)">
+                            	<span>素材</span>
+                            </div>
+                            <div class="ft_gang left" style="display:none;"></div>	
+                            <div class="ft_content left" style="display:none;" onclick="javascript:fabu_twozeroshowDiv(3)"></div>
+                            <div class="clear"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                    	<td class="fabu_twozero_td1 fabu_twozero_tdtop">设置价格：</td>
+                        <td class="fabu_twozero_td2">
+                        	<ul class="fabu_twozero_priceul">
+                            	<li class="fabu_twozero_priceliactive" id="priceli1"><a href="javascript:void(0);" onclick="change('1');">免费资源</a></li>
+                                <li id="priceli2"><a href="javascript:void(0);" onclick="change('2');">积分</a></li>
+                                <li id="priceli3"><a href="javascript:void(0);" onclick="change('3');">现金</a></li>
+                            </ul>
+                            <div id="pricediv1"></div>
+                            <div id="pricediv2" class="pricediv" style="display:none;">
+                            	<input onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')" type="text" /><span>积分</span>
+                            </div>
+                            <div id="pricediv3" class="pricediv" style="display:none;">
+                            	<input onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')" type="text" /><span>元</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                    	<td class="fabu_twozero_td1 fabu_twozero_tdtop" style="letter-spacing:1px;">标&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;题：</td>
+                        <td class="fabu_twozero_td2">
+                        	<textarea class="fabu_twozero_textarea1" onkeyup="changeLength(this,10)"></textarea>
+                            <div class="fabu_twozero_shengyu">
+                                发布资源标题，10字以内（<label>0</label>/10）
+                            </div>
+                        </td>
+                       
+                    </tr>
+                    <tr>
+                    	<td class="fabu_twozero_td1 fabu_twozero_tdtop">选择标签：</td>
+                        <td class="fabu_twozero_td2">
+                        	<ul class="fabu_twozero_ul left">
+                            	<li class="fabu_twozero_li">标签</li>
+                                <li class="fabu_twozero_li">标签</li>
+                                <li class="fabu_twozero_li">标签</li>
+                                <div class="fabu_twozero_qita left">
+                                    <span  onclick="showmore(1)" id="fabu_twozero_morebtn1" class="fabu_twozero_moredown">更多</span>
+                                </div>
+                            </ul>
+                            <!--<div class="fabu_twozero_qita left">
+                            	<span  onclick="showmore(1)" id="fabu_twozero_morebtn1" class="fabu_twozero_moredown">更多</span>
+                            </div>
+                            <div class="clear"></div>-->
+                            <div class="fabu_twozero_xzbq" id="fabu_twozero_morehidden1" style="display:none;">
+                            	<ul class="fabu_twozero_ul left">
+                                    <li class="fabu_twozero_li">标签</li>
+                                    <li class="fabu_twozero_li">标签</li>
+                                    <li class="fabu_twozero_li">标签</li>
+                                    <li class="fabu_twozero_li fabu_twozero_li0">标签</li>
+                                    <li class="fabu_twozero_li">标签</li>
+                                    <li class="fabu_twozero_li">标签</li>
+                                    <li class="fabu_twozero_li">标签</li>
+                                    <li class="fabu_twozero_li fabu_twozero_li0">标签</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                    	<td class="fabu_twozero_td1 fabu_twozero_tdtop" style="letter-spacing:1px;">关&nbsp;键&nbsp;字：</td>
+                        <td class="fabu_twozero_td2">
+                        	<textarea class="fabu_twozero_textarea2" onkeyup="changeLength(this,70)"></textarea>
+                            <div class="fabu_twozero_shengyu">
+                                提示：关键词最少三组用空格分开，请包含设计稿中的元素及文字，70字符以内。（<span class="sy_zishu" id="sy_zishu1">0</span>/70）
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                    	<td class="fabu_twozero_td1 fabu_twozero_tdtop">文件格式：</td>
+                        <td class="fabu_twozero_td2">
+                        	<ul class="fabu_twozero_ul">
+                            	<li class="fabu_twozero_li">PSD</li>
+                                <li class="fabu_twozero_li">PNG</li>
+                                <li class="fabu_twozero_li">JPG</li>
+                                <li class="fabu_twozero_li">PSD</li>
+                                <li class="fabu_twozero_li">PNG</li>
+                                <li class="fabu_twozero_li">JPG</li>
+                                <li class="fabu_twozero_li">PSD</li>
+                                <li class="fabu_twozero_li">PNG</li>
+                                <li class="fabu_twozero_li">JPG</li>
+                                <span class="fabu_twozero_qita"><a onclick="javascript:fabu_twozeroshowDiv(1)">其他+</a></span> 
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <!--发布内容结构-->
+            
+            <div class="fabu_twozero_bitian margin916">选填</div>
+
+            <!--发布内容结构-->
+            <div class="fabu_twozero_kuang">
+            	<table class="fabu_twozero_table1" cellpadding="0" cellspacing="0">
+                    <tr>
+                    	<td class="fabu_twozero_td1 fabu_twozero_tdtop">内容说明：</td>
+                        <td>
+                        	<textarea class="fabu_twozero_textarea1 fabu_twozero_textarea1sm" onkeyup="changeLength(this,50)"></textarea>
+                            <div class="fabu_twozero_shengyu">
+                                素材内容说明：最多50字（<label id="ss_sz">0</label>/50）
+                            </div>
+                        </td>
+                       
+                    </tr>
+                    <tr>
+                    	<td class="fabu_twozero_td1 fabu_twozero_tdtop">对应软件：</td>
+                        <td>
+                        	<ul class="fabu_twozero_ruanjianul">
+                            	<li class="fabu_twozero_ruanjianli">会声会影</li>
+                                <li class="fabu_twozero_ruanjianli">Photoshop</li>
+                                <li class="fabu_twozero_ruanjianli">Xmind</li>
+                                <li class="fabu_twozero_ruanjianli">Mindmanage</li>
+                                <li class="fabu_twozero_ruanjianli">Coreldraw</li>
+                                <li class="fabu_twozero_ruanjianli">Xmind</li>
+                                <li class="fabu_twozero_ruanjianli">Mindmanage</li>
+                                <li class="fabu_twozero_ruanjianli">Coreldraw</li>
+                                <li class="fabu_twozero_ruanjianli">Xmind</li>
+                                <li class="fabu_twozero_ruanjianli">Mindmanage</li>
+                                <li class="fabu_twozero_ruanjianli">Coreldraw</li>
+                                <span class="fabu_twozero_qita"><a onclick="javascript:fabu_twozeroshowDiv(2)">其他+</a></span>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                    	<td class="fabu_twozero_td1 fabu_twozero_tdtop" style="letter-spacing:1px;">版&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本：</td>
+                        <td>
+                        	<ul class="fabu_twozero_ul">
+                            	<li class="fabu_twozero_li">版本1版本1版本1版本1版本1版本1</li>
+                                <li class="fabu_twozero_li">版本1版本1版本1版本1版本1版本1</li>
+                                <li class="fabu_twozero_li">版本1版本1版本1版本1版本1版本1</li>
+                                <li class="fabu_twozero_li">版本1版本1版本1版本1版本1版本1</li>
+                                <li class="fabu_twozero_li">版本1版本1版本1版本1版本1版本1</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                    	<td class="fabu_twozero_td1 fabu_twozero_tdtop" style="letter-spacing:1px;">风&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;格：</td>
+                        <td>
+                        	<ul class="fabu_twozero_ul">
+                            	<li class="fabu_twozero_li">风格1</li>
+                                <li class="fabu_twozero_li">风格2</li>
+                                <li class="fabu_twozero_li">风格3</li>
+                                <li class="fabu_twozero_li">风格4</li>
+                                <li class="fabu_twozero_li">风格5</li>
+                                <li class="fabu_twozero_li">风格6</li>
+                                <li class="fabu_twozero_li">风格7</li>
+                                <li class="fabu_twozero_li">风格8</li> 
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                    	<td class="fabu_twozero_td1" style="letter-spacing:1px;">色&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;系：</td>
+                        <td>
+                        	<ul class="fabu_twozero_sexiul">
+                            	<li class="sexi1 fabu_twozero_sexiactive"><a></a></li>
+                                <li class="sexi2"><a></a></li>
+                                <li class="sexi3"><a></a></li>
+                                <li class="sexi4"><a></a></li>
+                                <li class="sexi5"><a></a></li>
+                                <li class="sexi6"><a></a></li>
+                                <li class="sexi7"><a></a></li>
+                                <li class="sexi8"><a></a></li>
+                                <li class="sexi9"><a></a></li>
+                                <li class="sexi10"><a></a></li>
+                                <li class="sexi11"><a></a></li>
+                                <li class="sexi12"><a></a></li>
+                                <li class="sexi13"><a></a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                    	<td class="fabu_twozero_td1"></td>
+                        <td><input type="submit" class="fabu_twozero_tjshbtn" value="提交审核" /></td>
+                    </tr>
+                </table>
+            </div>
+            <!--发布内容结构-->
+            </form>
+        </div> 
+    </div>
+    <div class="clear"></div>
+</div>
+
+<!--保障结构-->
+<div class="baozhang_wrap baozhang_wrap_fbfbfb">
+	<div class="baozhang_content auto">
+    	<div class="baozhang_div">
+        	<img src="img/aqzf_icon.png" />
+            <h2>安全支付</h2>
+            <p>通过在线支付或信用卡支付</p>
+        </div>
+        <div class="baozhang_div">
+        	<img src="img/zzjp_icon.png" />
+            <h2>致臻精品</h2>
+            <p>顶级团队良心打造专业制作经验</p>
+        </div>
+        <div class="baozhang_div">
+        	<img src="img/zxshfw_icon.png" />
+            <h2>在线售后服务</h2>
+            <p>我们强大的售后团队为您服务</p>
+        </div>
+        <div class="baozhang_div baozhang_lastdiv">
+        	<img src="img/fwzs_icon.png" />
+            <h2>服务至上</h2>
+            <p>如果您对所购产品不满意，可申请调换</p>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+<!--保障结构end-->
+
+<div class="join_designer"><a href="#"></a></div>
+
+<!--底部结构-->
+<div class="footer_wrap">
+	<div class="footer_content auto">
+    	<div class="fdiv1">
+        	<h2>模板</h2>
+            <a href="#">网页模板</a>
+            <a href="#">品牌设计模板</a>
+            <a href="#">CMS模板</a>
+            <a href="#">视频</a>
+            <a href="#">电子商务模板</a>
+            <a href="#">PPT</a>
+            <a href="#">画册</a>
+        </div>
+        <div class="fdiv2">
+        	<h2>主题</h2>
+            <a href="#">影视&音乐</a>
+            <a href="#">生活娱乐</a>
+            <a href="#">旅游休闲</a>
+            <a href="#">设计&摄影</a>
+            <a href="#">房产家居</a>
+            <a href="#">汽车&摩托车</a>
+            <a href="#">动物</a>
+        </div>
+        <div class="fdiv3">
+        	<div class="f31">
+            	<div class="f31_1">
+                	<h2>公司</h2>
+                    <a href="#">关于我们</a>
+                    <a href="#">加盟合作</a>
+                    <a href="#">联系我们</a>
+                </div>
+                <div class="f31_2">
+                	<h2>支持</h2>
+                    <a href="#">帮助中心</a>
+                    <a href="#">成为设计师</a>
+                    <a href="#">常见问题</a>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="f32">
+            	<h2>订阅我们的通讯</h2>
+                <p>接受有关新的模板和设计素材信息</p>
+                <div class="f32_dy">
+                	<div class="f32_inp left"><input type="text" value="电子邮箱" onfocus="if(this.value=='电子邮箱'){this.value='';this.style.color='#999999'}" onblur="if(this.value==''){this.value='电子邮箱';this.style.color='#999999'}" /></div>
+                    <a class="f32_btn right" href="#">订阅</a>
+                </div>
+            </div>
+        </div>
+        <div class="fdiv4">
+        	<h2>关注我们</h2>
+            <ul>
+            	<li class="wx_li">
+                	<a href="#"><span>微信</span></a>
+                    <div class="ewm ewm_position1"><img src="img/weixin_img.png" /></div>
+                </li>
+                <li class="wb_li">
+                	<a href="#"><span>微博</span></a>
+                    <div class="ewm ewm_position2"><img src="img/weixin_img.png" /></div>
+                </li>
+            </ul>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+<!--底部结构end-->
+<div class="bottom_gray"></div>
+
+<!--滚动条下拉出现搜索块-->
+<div class="scroll_wrap">
+	<div class="scroll_content auto">
+    	<div class="scroll_logo left"><a class="totop" href="javascript:;"><img src="img/logo.png" /></a></div>
+        <div class="scroll_search right">
+            <input type="text" class="text_inp1" value="请输入关键字" onfocus="if(this.value=='请输入关键字'){this.value='';this.style.color='#999999'}" onblur="if(this.value==''){this.value='请输入关键字';this.style.color='#999999'}" />
+            <a href="#" class="text_but1">确定</a>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+<!--滚动条下拉出现搜索块end-->
+
+<!--登陆弹出框-->
+<div id="popDiv" class="mydiv" style="display:none;">
+    <div class="login_tanchu_wrap">
+    	<div class="login_tanchu_logo"><img src="img/logo.png" /></div>
+        <div class="login_tanchu_title">账号登陆</div>
+        <div class="login_tanchu_form">
+        	<form action="" method="post">
+            	<div class="login_user login_user_inp">登陆账户：<input type="text" value="请输入用户名 或 手机号 或 邮箱" onfocus="if(this.value=='请输入用户名 或 手机号 或 邮箱'){this.value='';this.style.color='#999999'}" onblur="if(this.value==''){this.value='请输入用户名 或 手机号 或 邮箱';this.style.color='#999999'}" />
+                </div>
+                <div class="login_user login_user_pass">登陆密码：<input type="text" value="请输入密码" onfocus="if(this.value=='请输入密码'){this.value='';this.style.color='#999999';this.type='password'}" onblur="if(this.value==''){this.value='请输入密码';this.style.color='#999999';this.type='text'}" />
+                </div>
+                <div class="login_phone"><a href="javascript:qiehuan_iphone()">使用手机验证码登陆</a></div>
+                <div class="login_btn"><a href="#">立即登陆</a></div>
+                <div class="login_reg"><a href="#">注册麦软账号</a> | <a href="#">忘记密码</a></div>
+            </form>
+        </div>
+    </div>
+    <a class="tanchu_close" href="javascript:closeDiv()"></a>
+</div>
+<div id="popDiv1" class="mydiv" style="display:none;">
+    <div class="login_tanchu_wrap">
+    	<div class="login_tanchu_logo"><img src="img/logo.png" /></div>
+        <div class="login_tanchu_title">请登陆后继续操作</div>
+        <div class="login_tanchu_form">
+        	<form action="" method="post">
+            	<div class="login_user login_user_inp">手机号码：<input type="text" value="请输入手机号" onfocus="if(this.value=='请输入手机号'){this.value='';this.style.color='#999999'}" onblur="if(this.value==''){this.value='请输入手机号';this.style.color='#999999'}" />
+                </div>
+                <div class="login_user login_user_pass">验证码：<input type="text" value="请输入验证码" onfocus="if(this.value=='请输入验证码'){this.value='';this.style.color='#999999'}" onblur="if(this.value==''){this.value='请输入验证码';this.style.color='#999999'}" /><input type="button" id="yanzhengma_gray" class="login_user_yanzhengma" value="获取验证码" onClick="sendCode(this)" />
+                </div>
+                <script type="text/javascript">
+					var clock = '';
+					var nums = 60;
+					var btn;
+					var yzm_disabled = document.getElementById("yanzhengma_gray");
+					function sendCode(thisBtn)
+					{ 
+						btn = thisBtn;
+						btn.disabled = true; //将按钮置为不可点击
+						btn.value = nums+'秒后可重新获取';
+						clock = setInterval(doLoop, 1000); //一秒执行一次
+						yzm_disabled.style.backgroundColor="#999999";
+					}
+					function doLoop()
+					{
+						nums--;
+						if(nums > 0){
+							btn.value = nums+'秒后可重新获取';
+						}else{
+							clearInterval(clock); //清除js定时器
+							btn.disabled = false;
+							btn.value = '点击发送验证码';
+							nums = 10; //重置时间
+							yzm_disabled.style.backgroundColor="#e83a17";
+						}
+					}
+				</script>
+                <div class="login_phone"><a href="javascript:qiehuan_zhanghao()">使用账号密码登陆</a></div>
+                <div class="login_btn"><a href="#">立即登陆</a></div>
+                <div class="login_reg"><a href="#">注册麦软账号</a> | <a href="#">忘记密码</a></div>
+            </form>
+        </div>
+    </div>
+    <a class="tanchu_close" href="javascript:closeDiv()"></a>
+</div>
+<div id="bg" class="bg" style="display:none;"></div>
+<!--登陆弹出框end-->
+
+<!--文件格式弹出框-->
+<div id="fabu_twozeropopDiv1" class="fabu_twozeromydiv1" style="display:none;">
+	<form method="post" action="">
+		<input type="text" placeholder="手动添加系统未检测到的文件格式" class="fabu_twozero_tanchuinput" /><input type="submit" class="fabu_twozero_tanchubtn" value="提交" />
+    </form> 
+</div>
+<div id="fabu_twozerobg1" onclick="fabu_twozerocloseDiv(1)" class="fabu_twozerobg1" style="display:none;"></div>
+<!--文件格式弹出框end-->
+
+<!--对应软件弹出框-->
+<div id="fabu_twozeropopDiv2" class="fabu_twozeromydiv1" style="display:none;">
+    <form method="post" action="">
+		<input type="text" placeholder="填写素材对应的软件名称" class="fabu_twozero_tanchuinput" /><input type="submit" class="fabu_twozero_tanchubtn" value="提交" />
+    </form>
+</div>
+<div id="fabu_twozerobg2" onclick="fabu_twozerocloseDiv(2)" class="fabu_twozerobg1" style="display:none;"></div>
+<!--对应软件弹出框end-->
+
+<!--分类弹出框-->
+<div id="fabu_twozeropopDiv3" class="fenleimydiv1" style="display:none;">
+    <div class="ftfenlei_left left">
+    	<h2>主题</h2>
+    	<ul class="ftfenlei_tanchuul">
+        	<li id="fenlei_li1" class="ft_tanchuli_active"><a href="javascript:void(0);" onclick="fenlei_div('1');">一级分类1</a><span></span></li>
+            <li id="fenlei_li2"><a href="javascript:void(0);" onclick="fenlei_div('2');">一级分类2</a><span></span></li>
+            <li id="fenlei_li3"><a href="javascript:void(0);" onclick="fenlei_div('3');">一级分类3</a><span></span></li>
+        </ul>
+    </div>
+    <div class="ftfenlei_right left" id="ftfenlei_content1">
+    	<div class="ftfenlei_moren"></div>
+    	<div class="ftfenlei_yixuan" style="display:none;"></div>
+    	<ul class="ftlist_ul">
+        	<li>分类10</li>
+            <li>分类11</li>
+            <li>分类12</li>
+            <li>分类13</li>
+            <li>分类14</li>
+            <li>分类15</li>
+            <li>分类16</li>
+            <li>分类17</li>
+            <li>分类18</li>
+            <li>分类19</li>
+        </ul>
+    </div>
+    <div class="ftfenlei_right left" id="ftfenlei_content2" style="display:none;">
+    	<div class="ftfenlei_moren"></div>
+    	<div class="ftfenlei_yixuan" style="display:none;"></div>
+    	<ul class="ftlist_ul">
+        	<li>分类101</li>
+            <li>分类11</li>
+            <li>分类12</li>
+            <li>分类13</li>
+            <li>分类14</li>
+            <li>分类15</li>
+            <li>分类16</li>
+            <li>分类17</li>
+            <li>分类18</li>
+            <li>分类19</li>
+        </ul>
+    </div>
+    <div class="ftfenlei_right left" id="ftfenlei_content3" style="display:none;">
+    	<div class="ftfenlei_moren"></div>
+   	 	<div class="ftfenlei_yixuan" style="display:none;"></div>
+    	<ul class="ftlist_ul">
+        	<li>分类102</li>
+            <li>分类11</li>
+            <li>分类12</li>
+            <li>分类13</li>
+            <li>分类14</li>
+            <li>分类15</li>
+            <li>分类16</li>
+            <li>分类17</li>
+            <li>分类18</li>
+            <li>分类19</li>
+        </ul>
+    </div>
+    <a class="fabu_twozero_tanchu_close" href="javascript:fabu_twozerocloseDiv(3)"></a>
+</div>
+<div id="fabu_twozerobg3" class="fenleibg1" style="display:none;"></div>
+<!--分类弹出框end-->
+</body>
+</html>

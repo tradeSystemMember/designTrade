@@ -8,7 +8,7 @@
     <nav>
         <div class="top_wrap">
             <div class="top auto">
-                <div class="top_logo left"><a href="#"><img th:src="@{/img/logo.png}" /></a></div>
+                <div class="top_logo left"><a th:href="@{/}"><img th:src="@{/img/logo.png}" /></a></div>
                 <div class="top_search left">
                     <input type="text" class="text_inp" th:value="${search}?${search}:'请输入关键字'" value="请输入关键字" onfocus="if(this.value=='请输入关键字'){this.value='';this.style.color='#999999'}" onblur="if(this.value==''){this.value='请输入关键字';this.style.color='#999999'}" />
                     <!--    搜索功能新增 script               -->
@@ -31,13 +31,27 @@
                 </div>
                 <div class="top_list right">
                     <ul>
-                        <a th:if="${session.user != null}" th:href="@{/index/loginOut}">
+                        <a th:if="${session.user != null}" id="logonOut">
                             <li class="zh_li">
                                 <div class="zh_d">
                                     <span th:text="注销"></span>
                                 </div>
                             </li>
                         </a>
+                        <script type="text/javascript">
+                            $("#logonOut").click(function () {
+                                $.ajax({
+                                    url:"/index/loginOut",
+                                    type:"post",
+                                    success:function () {
+                                        window.location.href="/";
+                                    },
+                                    error:function () {
+                                        window.location.href="/";
+                                    }
+                                })
+                            })
+                        </script>
                         <a th:if="${session.user != null}" th:href="@{/center/toCenter}">
                             <li class="zh_li">
                                 <div class="zh_d">
@@ -50,8 +64,8 @@
                                 <span><a onclick="javascript:showDiv()">登陆</a>/<a th:href="@{/index/register}">注册</a></span>
                             </div>
                         </li>
-                        <li class="gwc_li"><i>购物车</i></li>
-                        <li class="sc_li"><i>收藏</i></li>
+                        <a th:href="@{/cart/toCart}"><li class="gwc_li"><i>购物车</i></li></a>
+                        <a th:href="@{/collect/toCollect}"><li class="sc_li"><i>收藏</i></li></a>
                         <li class="xx_li">
                             <i>
                                 <div class="y">

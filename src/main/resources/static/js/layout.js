@@ -84,7 +84,8 @@ function change_div(id){
 	// 	}
 	// });
 	// console.log([[${menu_active}]]);
-	window.location.href="/Tradesystem/product/list?menu="+menu;
+	// window.location.href="/Tradesystem/product/list?menu="+menu;
+	window.location.href=contextPath+"/product/list?menu="+menu;
 
 }
 
@@ -226,14 +227,14 @@ $(function(){
 			timer1 = setTimeout(function(){
 				//异步请求查询该素材的所有标签
 				$.ajax({
-					url:"/Tradesystem/product/taglist",
+					url:contextPath+"/product/taglist",
 					data:{"sid":sid_val},
 					dataType:"json",
 					type:"get",
 					success:function(taglist){
 						tagul.empty();
 						$.each(taglist,function (k,v) {
-							tagul.append("<li><a href='/Tradesystem/product/list?submenu="+v+"'>"+v+"</a></li>")
+							tagul.append("<li><a href='/product/list?submenu="+v+"'>"+v+"</a></li>")
 						});
 					}
 				});

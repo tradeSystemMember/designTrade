@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>我的购物车</title>
+    <link rel="stylesheet" href="/css/layout.css"/>
+    <link rel="stylesheet" href="/css/user.css"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/assets/css/layui.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/assets/css/view.css}"/>
+    <script type="text/javascript" src="/js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="/js/bannerslider.js"></script>
+    <script type="text/javascript" src="/js/layout.js"></script>
+    <script type="text/javascript" th:src="@{/assets/layui.js}"></script>
+    <script th:src="@{https://cdn.staticfile.org/vue/2.2.2/vue.min.js}"></script>
+</head>
+
+<body>
+<div th:insert="~{top :: nav}"></div>
+
+<!--1200结构-->
+<div class="pro_wrap user_pro_wrap  auto">
+    <h2 class="weizhi_title">位置：<a href="#">首页</a> > 购物车</h2>
+</div>
+<!--1200结构end-->
+
+<div class="user_join_designer">
+    <a href="#"></a>
+</div>
+
+<div class="user_center auto">
+    <div class="user_navside left">
+        <ul class="user_navside_ul">
+            <li><a th:href="@{/center/toCenter}"><span class="user_icon1">用户中心</span></a></li>
+            <li><a th:href="@{/publish/toPublish}"><span class="user_icon2">发布</span></a></li>
+            <li><a th:href="@{/collect/toCollect}"><span class="user_icon3">我的收藏</span></a></li>
+            <li class="user_active_li"><a th:href="@{/cart/toCart}"><span class="user_icon4">我的购物车</span></a></li>
+            <li><a th:href="@{/downHistory/toDownHistory}"><span class="user_icon6">下载记录</span></a></li>
+            <li><a th:href="@{/buyHistory/toBuyHistory}">购买记录</span></a></li>
+            <li><a th:href="@{/wallet/toWallet}">我的钱包</span></a></li>
+            <!--<li><a href="#"><span class="user_icon10">消息中心</span></a></li>-->
+            <li><a th:href="@{/userSetting/toUserSetting}"><span class="user_icon11">个人设置</span></a></li>
+        </ul>
+    </div>
+    <div class="user_right right">
+        <div class="user_gouwuche_wrap">
+            <div class="user_gouwuche_content" id="shoppingcarContainer">
+                <table cellpadding="0" cellspacing="0" class="gouwuche_table">
+                    <tr>
+                        <th style="width:463px; padding-left:154px;">商品</th><th>定价</th><th style="text-align:center;">操作</th>
+                    </tr>
+                    <tr v-for = "item in shoppingCarData">
+                        <td class="gouwuche_td">
+                            <input type="checkbox" />
+                            <div class="gouwuche_img">
+                                <img src="/img/user_fabu_smallimg.gif" />
+                            </div>
+                            <div class="gouwuche_title"><span>{{item.name}}</span></div>
+                        </td>
+                        <td><span>{{item.money}}</span></td>
+                        <td style="text-align:center;"><a href="#">移入收藏夹</a><br /><a href="#">删除</a></td>
+                    </tr>
+
+                </table>
+                <!--分页导航-->
+                <div id="layPagination"></div>
+                <script>
+                        var vue = new Vue({
+                            el: "#shoppingcarContainer",
+                            data: {
+                                shoppingCarData: null
+                            }
+                        });
+                        var pageIndex = 1;//默认第一页
+                        var PageSize = 2;//每页显示记录数
+                        var totalCount = 0;//总记录数
+                        pagination(pageIndex,PageSize);
+                        function pagination(pageIndex,pageSize){
+                            var param ={
+                                pageIndex:pageIndex,
+                                pageSize:pageSize,
+                            };
+                            $.ajax({
+                                type:"post",
+                                url:"/cart/getShoppingCarData",
+                                data:param,
+                                async:false,
+                                success:function (data) {
+                                    vue.shoppingCarData = data.data;
+                                    totalCount = data.count;
+                                }
+                            })
+                        }
+                        layui.use('laypage', function(){
+                            var laypage = layui.laypage;
+
+                            //执行一个laypage实例
+                            laypage.render({
+                                elem: 'layPagination'
+                                ,count: totalCount //数据总数，从服务端得到
+                                ,limit:2
+                                ,jump:function(obj,first){
+                                    if (!first){
+                                        pagination(obj.curr, obj.limit);
+                                    }
+                                }
+                            });
+                        });
+                </script>
+
+            </div>
+            <div class="gouwuche_jiesuan">
+                <div class="gouwuche_jiesuan_left left">
+                    <input type="checkbox" />全选<a href="#">删除选中商品</a><a href="#">移入收藏夹</a>
+                </div>
+                <div class="gouwuche_jiesuan_right right">
+                    <a class="gouwuche_jiesuan_a right" href="#">去结算</a>
+                    <div class="gouwuche_jiesuan_xq right">已选中<span class="red">3</span>件商品，商品总价：<span class="red red18">¥28.00</span></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+
+<div th:insert="~{bottom :: nav}"></div>
+</body>
+</html>
