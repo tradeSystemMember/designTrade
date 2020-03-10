@@ -3,6 +3,7 @@ package com.gem.tradesystem.controller;
 import com.gem.tradesystem.entity.Sucai;
 import com.gem.tradesystem.entity.User;
 import com.gem.tradesystem.service.SucaiService;
+import com.gem.tradesystem.utils.SrcUrl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.Banner;
 import org.springframework.stereotype.Controller;
@@ -11,11 +12,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.awt.datatransfer.StringSelection;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.net.http.HttpRequest;
 import java.util.List;
 
@@ -26,9 +29,11 @@ public class ProductController {
 
     @Autowired
     private SucaiService sucaiService;
+    @Autowired
+    private SrcUrl srcUrl;
 
     @RequestMapping("/detail")
-    public String detail(Integer id,HttpServletRequest request,Model model,HttpSession session){
+    public String detail(Integer id,HttpServletRequest request,Model model,HttpSession session) throws UnsupportedEncodingException {
 //        String sid=request.getParameter("id");
         String menuName=request.getParameter("menu");
         String submenuName=request.getParameter("submenu");
@@ -42,6 +47,9 @@ public class ProductController {
         if(id!=null){
 //            Integer id=Integer.parseInt(sid);
             Sucai sucai=sucaiService.getOneById(id);
+
+            String srcurl=srcUrl.getSrcUrl(sucai);//动态拼接数据库中存储的路径后
+            sucai.setSave(srcurl);
 //            System.out.println(sucai);
             List<String> taglist=sucaiService.getTags(id);
             model.addAttribute("sucai",sucai);
@@ -53,6 +61,9 @@ public class ProductController {
                 Integer uid=user.getId();
                 List<Integer> user_favlist =sucaiService.getUserFavList(uid);
                 model.addAttribute("favlist",user_favlist);
+                //已登录的用户的购物车
+                List<Integer> user_shopcar=sucaiService.getUserShoppingCar(uid);
+                model.addAttribute("shopcar",user_shopcar);
             }
 
         }
@@ -61,7 +72,7 @@ public class ProductController {
     }
 
     @RequestMapping("/list")//显示pro_list.html
-    public String list(Integer curr, HttpServletRequest request, Model model,HttpSession session){
+    public String list(Integer curr, HttpServletRequest request, Model model,HttpSession session,HttpServletResponse response) throws UnsupportedEncodingException {
         //页码
         Integer current=1;
         if(curr!=null)
@@ -103,20 +114,34 @@ public class ProductController {
 
         //搜索结果
         String search=request.getParameter("search");
+
         if(search!=null&&!("".equals(search))){
+            search=search.replaceAll("\\s+", "");
             list=sucaiService.getSearchPageList(search,index,pageSize);
             System.out.println("search=======>"+search);
             count=sucaiService.getSearchCount(search);
+            if(count==0)
+                model.addAttribute("seachTip","暂无查询结果！");
         }
         System.out.println(count);
         Integer pageNum=((count-1)/pageSize)+1;//总页数
+        if(count==0)
+            model.addAttribute("seachTip","暂无该类型的素材！");
 
-        //已登录用户的收藏已否
         User user= (User) session.getAttribute("user");
         if(user!=null){
+            //已登录用户的收藏已否
             Integer uid=user.getId();
             List<Integer> user_favlist =sucaiService.getUserFavList(uid);
             model.addAttribute("favlist",user_favlist);
+            //已登录的用户的购物车
+            List<Integer> user_shopcar=sucaiService.getUserShoppingCar(uid);
+            model.addAttribute("shopcar",user_shopcar);
+        }
+
+        for(Sucai s:list){
+            String srcurl=srcUrl.getSrcUrl(s);//动态拼接数据库中存储的路径后
+            s.setSave(srcurl);
         }
 
 
@@ -128,6 +153,9 @@ public class ProductController {
         model.addAttribute("curr",current);
         model.addAttribute("total",count);
         model.addAttribute("search",search);
+
+
+//        Cookie cookie=new Cookie("downloadToken",downloadToken);
 
         System.out.println("pageNum"+pageNum);
         System.out.println("pageSize"+pageSize);
@@ -185,6 +213,7 @@ public class ProductController {
             return sucai;
         }
     }
+
 
 //    @RequestMapping("/sublist")
 //    @ResponseBody

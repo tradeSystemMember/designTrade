@@ -87,6 +87,8 @@ function change_div(id){
 	// window.location.href="/Tradesystem/product/list?menu="+menu;
 	window.location.href=contextPath+"/product/list?menu="+menu;
 
+
+
 }
 
 //用户中心-发布页tab切换js
@@ -213,10 +215,9 @@ $(function(){
 //鼠标悬停时出现
 $(function(){
 	var timer1;
-				
-	$("#img_ulwrap .zcq_div .zcq_c1").hover(
+	$(".zcq_div .zcq_c1").hover(
 		function(event){//event是为了鼠标指针的位置，放在这没用
-			//$(this).find(".down").css("display", "block");		
+			//$(this).find(".down").css("display", "block");
 			var obj1 = $(this).find(".detail_hidden");//不能放到定时器里面否则出不来
 
 			var tagul=$(this).find(".detail_biaoqian_wrap ul");
@@ -234,7 +235,8 @@ $(function(){
 					success:function(taglist){
 						tagul.empty();
 						$.each(taglist,function (k,v) {
-							tagul.append("<li><a href='/product/list?submenu="+v+"'>"+v+"</a></li>")
+							// tagul.append("<li><a href='/Tradesystem/product/list?submenu="+v+"'>"+v+"</a></li>")
+							tagul.append("<li><a href='"+contextPath+"/product/list?submenu="+v+"'>"+v+"</a></li>")
 						});
 					}
 				});
@@ -245,22 +247,72 @@ $(function(){
 				obj1.css("top",(_offset-_offsetTop+$(".scroll_wrap").height()+10)).show().delay(1000);
 
 				//$(".scroll_wrap").height()//就是滚动置顶在窗口顶端的高度，+10代表距离可视区的距离
-			//obj.show();
+				//obj.show();
 			},1000)
 			//alert($(window).scrollTop())//获取滚动条的距离
 			//alert($(this).offset().top)//获取块到顶部的距离
 		},
 		function(){
 			var obj1 = $(this).find(".detail_hidden");
-			 if(timer1) {
-				  clearTimeout(timer1);
-				  obj1.stop().fadeTo("slow",0,function(){//淡出效果
-					  $(this).css("display", "none");
-				  })
-			  //obj.hide();
-			  };
+			if(timer1) {
+				clearTimeout(timer1);
+				obj1.stop().fadeTo("slow",0,function(){//淡出效果
+					$(this).css("display", "none");
+				})
+				//obj.hide();
+			};
 		}
-	)		
+	)
+
+
+	// $("#img_ulwrap .zcq_div .zcq_c1").hover(
+	// 	function(event){//event是为了鼠标指针的位置，放在这没用
+	// 		//$(this).find(".down").css("display", "block");
+	// 		var obj1 = $(this).find(".detail_hidden");//不能放到定时器里面否则出不来
+	//
+	// 		var tagul=$(this).find(".detail_biaoqian_wrap ul");
+	// 		var sid_val=$(this).find(".sucaiid").val();
+	//
+	// 		var _offsetTop=$(this).offset().top;
+	// 		var _offset=$(document).scrollTop();
+	// 		timer1 = setTimeout(function(){
+	// 			//异步请求查询该素材的所有标签
+	// 			$.ajax({
+	// 				url:contextPath+"/product/taglist",
+	// 				data:{"sid":sid_val},
+	// 				dataType:"json",
+	// 				type:"get",
+	// 				success:function(taglist){
+	// 					tagul.empty();
+	// 					$.each(taglist,function (k,v) {
+	// 						// tagul.append("<li><a href='/Tradesystem/product/list?submenu="+v+"'>"+v+"</a></li>")
+	// 						tagul.append("<li><a href='"+contextPath+"/product/list?submenu="+v+"'>"+v+"</a></li>")
+	// 					});
+	// 				}
+	// 			});
+	//
+	// 			obj1.stop().fadeTo("slow",1,function(){//淡入效果
+	// 				$(this).css("display", "block");
+	// 			})
+	// 			obj1.css("top",(_offset-_offsetTop+$(".scroll_wrap").height()+10)).show().delay(1000);
+	//
+	// 			//$(".scroll_wrap").height()//就是滚动置顶在窗口顶端的高度，+10代表距离可视区的距离
+	// 		//obj.show();
+	// 		},1000)
+	// 		//alert($(window).scrollTop())//获取滚动条的距离
+	// 		//alert($(this).offset().top)//获取块到顶部的距离
+	// 	},
+	// 	function(){
+	// 		var obj1 = $(this).find(".detail_hidden");
+	// 		 if(timer1) {
+	// 			  clearTimeout(timer1);
+	// 			  obj1.stop().fadeTo("slow",0,function(){//淡出效果
+	// 				  $(this).css("display", "none");
+	// 			  })
+	// 		  //obj.hide();
+	// 		  };
+	// 	}
+	// )
 	
 })
 

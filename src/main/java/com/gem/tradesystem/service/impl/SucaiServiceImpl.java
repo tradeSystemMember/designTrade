@@ -123,6 +123,18 @@ public class SucaiServiceImpl implements SucaiService {
     }
 
     @Override
+    public List<Sucai> getTopSale() {
+        List<Sucai> slist=sucaiMapper.getTopSale();
+        return slist;
+    }
+
+    @Override
+    public List<Sucai> getTopFav() {
+        List<Sucai> slist=sucaiMapper.getTopFav();
+        return slist;
+    }
+
+    @Override
     public int updateFav(Integer id) {
         int i=sucaiMapper.updateFav(id);
         return i;
@@ -150,6 +162,42 @@ public class SucaiServiceImpl implements SucaiService {
     public List<Integer> getUserFavList(Integer userid) {
         List<Integer> sucaiList=sucaiMapper.getUserFavList(userid);
         return sucaiList;
+    }
+
+    @Override
+    public Integer addToCar(Integer sucaiid, Integer userid) {
+        Integer i=sucaiMapper.addToCar(sucaiid,userid);
+        return i;
+    }
+
+    @Override
+    public List<Integer> getUserShoppingCar(Integer id) {
+        List<Integer> shoppingcar=sucaiMapper.getUserShoppingCar(id);
+        return shoppingcar;
+    }
+
+    @Override
+    public Integer getDownload(Integer sucaiid, Integer userid) {
+        Integer i=sucaiMapper.getDownload(sucaiid,userid);
+        return i;
+    }
+
+    @Override
+    public Integer getOneDownload(Integer sucaiid, Integer userid) {
+        Integer i=sucaiMapper.getOneDownload(sucaiid,userid);
+        return i;
+    }
+
+    @Override
+    public Integer insertOneDownload(Integer sucaiid, Integer userid) {
+        Integer i=sucaiMapper.insertOneDownload(sucaiid,userid);
+        return i;
+    }
+
+    @Override
+    public int updateDown(Integer id) {
+        int i=sucaiMapper.updateDown(id);
+        return i;
     }
 
 //    @Override

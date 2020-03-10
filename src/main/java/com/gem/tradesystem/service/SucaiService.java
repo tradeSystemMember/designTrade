@@ -27,6 +27,9 @@ public interface SucaiService {
     List<Sucai> getSearchList(String search);//获取根据输入的素材名称模糊查询的所有结果
     Integer getSearchCount(String search);//获取搜索结果的素材总数
     List<Sucai> getSearchPageList(String search,Integer page,Integer size);//分页获取搜索结果的素材
+    //获取首页最畅销，热门的素材
+    List<Sucai> getTopSale();
+    List<Sucai> getTopFav();
 
 //    Sucai getOneSu(Integer id);
     //点赞相关操作
@@ -35,5 +38,15 @@ public interface SucaiService {
     int updateDelFav(Integer id);//根据sucai的id更新sucai表中的点赞数 取消赞
     int deleteOneFav(Integer sucaiid,Integer userid);//在fav表中删除一条点赞记录
     List<Integer> getUserFavList(Integer userid);//获取登录用户已点赞的素材id
+
+    //加入购物车
+    Integer addToCar(Integer sucaiid,Integer userid);//添加一条记录到购物车表中
+    List<Integer> getUserShoppingCar(Integer id);//获取用户的购物车列表的素材的id
+    Integer getDownload(Integer sucaiid, Integer userid);//查看用户是否有该素材的相关订单
+
+    //下载文件
+    Integer getOneDownload(Integer sucaiid,Integer userid);//查询是否存在相应用户对于相应素材的购买记录
+    Integer insertOneDownload(Integer sucaiid,Integer userid);//下载后在下载表中插入一条下载记录
+    int updateDown(Integer id);//更新素材表中的下载数目
 
 }

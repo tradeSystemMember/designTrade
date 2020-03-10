@@ -41,13 +41,13 @@
                         <script type="text/javascript">
                             $("#logonOut").click(function () {
                                 $.ajax({
-                                    url:"/index/loginOut",
+                                    url:contextPath+"/index/loginOut",
                                     type:"post",
                                     success:function () {
-                                        window.location.href="/";
+                                        window.location.href=contextPath+"/";
                                     },
                                     error:function () {
-                                        window.location.href="/";
+                                        window.location.href=contextPath+"/";
                                     }
                                 })
                             })

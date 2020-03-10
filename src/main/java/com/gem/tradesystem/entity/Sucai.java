@@ -29,4 +29,5 @@ public class Sucai {
     private String author;
     private String save;
     private String description;
+    private Integer status;
 }
